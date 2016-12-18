@@ -1,6 +1,6 @@
 <?php
 return array (
-  'ecoveles.com.ua' => 
+  'ecoveles.loc' => 
   array (
     0 => 
     array (

@@ -236,17 +236,23 @@ table#main tr td.menu1 div.frst{
 .lang{
   padding-top:3px;
 }
-.auth{
-  margin-right: 20px;
+.auth {
+    margin-right: 12px;
+    padding-left: 15px;
+    background: url(../../images/raund_white.png) left center no-repeat;
 }
 .auth a{
   color: #FFFFFF;
   font-family: OpenSans,Tahoma,Verdana;
   line-height:22px;
   font-size: 12px;
-  font-weight: bold;
-  text-decoration: underline;
+  font-weight: normal;
+  text-decoration: none;
 }
+.auth a:hover{
+  color: #FFFF99;
+}
+
 
 table#main tr td.menu2{
 /*  height: 53px; */
@@ -385,7 +391,7 @@ ul.vertical, ul.horizontal {
 }
 .horizontal li {
 	float: left;
-	padding:0 20px 0 10px;
+	padding:0 12px 0 10px;
 }
 .menu2 .horizontal li {
 	padding:0 20px 0 20px;
@@ -397,7 +403,7 @@ ul.vertical, ul.horizontal {
 }
 .cpt_auxpages_navigation {
 /*	font-size:75%; */
-	font-weight:bold;
+	font-weight:normal;
 	padding: 5px 0;
     }
 
@@ -454,8 +460,8 @@ ul.vertical, ul.horizontal {
 	background:url(../../images/eco_mainmenu_sep.png) left center no-repeat;
 }
 .cpt_auxpages_navigation li {
-	padding-left: 10px;
-	background:url(../../images/grn_arr_li_infopages.gif) left center no-repeat;
+	padding-left: 15px;
+	background:url(../../images/raund_white.png) left center no-repeat;
 }
 td.xtra ul.horizontal{
   padding-left:0;
