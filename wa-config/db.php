@@ -3,10 +3,10 @@
 return array (
   'default' => 
   array (
-    'host' => 'ecoveles.mysql.ukraine.com.ua',
+    'host' => 'localhost',
     'port' => false,
-    'user' => 'ecoveles_db',
-    'password' => '527cQ57A',
+    'user' => 'root',
+    'password' => '',
     'database' => 'ecoveles_db',
     'type' => 'mysqli',
   ),
