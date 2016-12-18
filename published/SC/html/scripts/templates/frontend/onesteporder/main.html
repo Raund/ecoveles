@@ -1,0 +1,367 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script>
+	var cart_content_empty = '{"cart_content_empty"|translate}';
+	var srch_products_plural = '{"srch_products_plural"|translate}';
+	var noframe = '{$PAGE_VIEW}';
+	var conf_onesteporder_informer_type = '{$smarty.const.CONF_ONESTEPORDER_INFORMER_TYPE}';
+	var ordering = '{$smarty.get.ordering}';
+	var url_root = '{$smarty.const.URL_ROOT}';
+</script>
+<script type="text/javascript" src="{$smarty.const.URL_JS}/onesteporder.js"></script>
+<link rel="stylesheet" href="{$smarty.const.URL_CSS}/onesteporder.css" type="text/css" media="screen" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="{$smarty.const.URL_CSS}/onesteporderIE.css" type="text/css" media="screen" /><![endif]-->
+
+{if $smarty.const.CONF_ONESTEPORDER_INFORMER_TYPE eq "inform" && $smarty.get.ordering == '' && $PAGE_VIEW eq 'noframe' }
+	<div class="onesteporder-center-IFrame">
+	<div class="onesteporder-width350-IFrame"  id="blck-content">
+
+		{assign var="ProductsNum" value=0}
+		{section loop=$cart_content name=i}
+		{assign var="ProductsNum" value=$ProductsNum+$cart_content[i].quantity}
+		{/section}
+		<div class="onesteporder-informer">
+
+			<a id="oforml" href='#' onclick="parent.location.href='{"?ukey=cart&ordering=yep"|set_query}'"/>Оформить<br />заказ</a>
+			<a id="prod_pokup" href='javascript:void(0);' {if $PAGE_VIEW eq 'noframe' && $smarty.get.ordering != 'yep'}onclick='javascript:parent.sswgt_CartManager.hide(true);return false;'{else}onclick='history.go(-1);'{/if} >Продолжить покупки</a>
+		</div>
+	</div>
+	</div>
+
+	
+{else}
+
+<div class="onesteporder-center{if $PAGE_VIEW eq 'noframe'}-IFrame{/if}">
+<div class="onesteporder-width1000{if $PAGE_VIEW eq 'noframe'}-IFrame{/if}"  id="blck-content">
+
+{if $cart_content}
+<div id="CartContent">
+		
+	{if $make_more_exact_cart_content}
+		{"cart_items_left_from_prev_session"|translate}
+	{/if}
+	<div class="{if $isErrorMinimalAmount && !$MessageBlock}{else}system_DisplayNone{/if}" id="CartMinimalAmount">
+		<div class='error_block'><span class="error_message">{"cart_min_order_amount_not_reached"|translate} {$cart_min}</span></div>
+	</div>
+	
+
+	<div class="onesteporder-remove-all-elements" id="RemoveCart" ><a href='javascript:void(0);' title='{"btn_delete"|transcape}' onclick="RemoveAllElements();" >{"my_delete_all_products"|translate}<span></span></a></div>
+	<div class="onesteporder-remove-all-elements"><a href='javascript:void(0);' {if $PAGE_VIEW eq 'noframe' && $smarty.get.ordering != 'yep'}onclick='javascript:parent.sswgt_CartManager.hide(true);return false;'{else}onclick='history.go(-1);'{/if} >{"btn_back_to_shopping"|translate}</a></div>
+	<div class="onesteporder-block-title">{"my_selected_products"|translate}:</div>
+
+	<table cellspacing="0" cellpadding="0" border="0" class="onesteporder-products-table">
+		
+		<tr class="onesteporder-products-tr-first">
+			<td colspan=3></td>
+			<td class="onesteporder-products-price"></td>
+			<td ></td>
+		</tr>
+		{assign var="ProductsNum" value=0}
+		{section loop=$cart_content name=i}
+		{if $session_items}{assign var=_prdid value=$session_items[i]}{else}{assign var=_prdid value=$cart_content[i].id}{/if}	
+		
+		<tr id="CartElement{$_prdid}" class="onesteporder-products-tr{if $smarty.section.i.last}-prelast{/if}">
+		<form method="POST" id="configuration-item-{$_prdid}">
+			<td class="onesteporder-products-image">{if $cart_content[i].thumbnail_url}<img src="{$cart_content[i].thumbnail_url|escape:'html'}" width="{$cart_content[i].thumbnail_width}" />{else}&nbsp;{/if}</td>
+			<td class="onesteporder-products-name">
+				<a href='{"?ukey=product&productID=`$cart_content[i].productID`&product_slug=`$cart_content[i].slug`"|set_query_html}' {if $PAGE_VIEW eq 'noframe'}TARGET="_parent"{/if}>{$cart_content[i].name}</a>
+				{if $smarty.const.CONF_ENABLE_PRODUCT_SKU&&$cart_content[i].product_code}<br><i>{$cart_content[i].product_code}</i> {/if}
+				
+				
+				{assign var="extraCount" value=0}{if $cart_content[i].extra}{section name=e loop=$cart_content[i].extra}{if $cart_content[i].extra[e].option_type != 0 }{assign var="extraCount" value=$extraCount+1}{/if}{/section}{/if}
+				{if $cart_content[i].extra && $extraCount >0}	
+				<div class="onesteporder-configuration-item-url"><a href="javascript:void(0);" onClick="ShowConfigurationField('{$_prdid}');">{"btn_change"|translate} характеристики</a></div>
+				<div class="onesteporder-configuration-item-div" id="onesteporder-configuration-item-div-{$_prdid}" >
+					<input type="hidden" name="save_configuration" value="yep" />
+					<input type="hidden" name="itemID" value="{$_prdid}" />
+					<input type="hidden" name="productID" value="{$cart_content[i].productID}" />
+					<table>		
+					{counter name='select_counter' start=0 skip=1 print=false assign='select_counter_var'}
+					{section name=e loop=$cart_content[i].extra}
+						{if $cart_content[i].extra[e].option_type != 0 }
+						{section name=k loop=$cart_content[i].extra[e].option_show_times}
+						<tr>					
+							<td>
+								{$cart_content[i].extra[e].name|escape:'html'}{if $cart_content[i].extra[e].option_show_times > 1 }({counter name=option_show_times}):{else}:{/if}
+							</td>
+							<td>
+								{counter name=select_counter assign=_cnt}
+								<select name='option_{$_cnt}'>
+								<option value='' rel="0" {if $cart_content[i].configurations[$optionID_current] eq ""}selected="selected"{/if}>{"str_not_defined"|transcape}</option>
+								{section name=j loop=$cart_content[i].extra[e].values_to_select}
+									{assign var="optionID_current" value=$cart_content[i].extra[e].optionID}
+									<option value='{$cart_content[i].extra[e].values_to_select[j].variantID}' rel='{$cart_content[i].extra[e].values_to_select[j].price_surplus}'
+									{if $cart_content[i].configurations[$optionID_current] eq $cart_content[i].extra[e].values_to_select[j].variantID}selected="selected"{/if}
+									>
+										{$cart_content[i].extra[e].values_to_select[j].option_value}
+									</option>
+								{/section}
+								</select>
+							</td>
+						</tr>
+						{/section}
+						{/if}
+					{/section}
+					</table>
+					<div  class="onesteporder-configuration-item-hide"><a href="javascript:void(0);" onClick="HideConfigurationField();">{"my_hide"|translate}</a></div>
+					<input type="button" value='{"btn_apply"|translate}' class="onesteporder-contact-button configuration-item-submit" onclick="ChangeConfigurationItem('{$_prdid}','{$cart_content[i].in_stock}');" />
+				</div>
+				{/if}	
+				
+				
+				
+			</td>
+			<td class="onesteporder-products-count">
+				{assign var="ProductsNum" value=$ProductsNum+$cart_content[i].quantity}
+				<input type="button"  onClick="RecalculateCartIcons(true, '{$_prdid}','{$cart_content[i].costUC}','{$cart_content[i].in_stock}');" value=" + " class="system_RecalculateCartIconP{$_prdid} RecalculateCartIcons onesteporder-products-count-icon-p {if $cart_content[i].quantity eq $cart_content[i].in_stock }onesteporder-products-count-icon-p-disabled{/if}" {if $cart_content[i].quantity eq $cart_content[i].in_stock }disabled{/if} />
+				
+				<input type="text" maxlength="10" name="count_{$_prdid}" value="{$cart_content[i].quantity}"
+				id="ProductQty{$_prdid}" onBlur="RecalculateCart(this,'{$_prdid}','{$cart_content[i].costUC}','{$cart_content[i].in_stock}');" size=5 class="onesteporder-products-count-input"/>
+				
+				<input type="button"  onClick="RecalculateCartIcons(false, '{$_prdid}','{$cart_content[i].costUC}','{$cart_content[i].in_stock}');" value=" - " class="system_RecalculateCartIconM{$_prdid} RecalculateCartIcons onesteporder-products-count-icon-m {if $cart_content[i].quantity eq '1'}onesteporder-products-count-icon-m-disabled{/if}" {if $cart_content[i].quantity eq '1'}disabled{/if} />
+				
+				{if $cart_content[i].min_order_amount}{"prdset_minimal_order_quantity"|translate}{$cart_content[i].min_order_amount}{"str_items"|translate}{/if}
+			</td>
+			<td id="ProductPrice{$_prdid}" class="onesteporder-products-price">
+				{$cart_content[i].cost}
+			</td>
+			<td class="onesteporder-products-delete">
+				<a href='javascript:void(0);' title='{"btn_delete"|transcape}' onclick="RemoveElement('{$_prdid}');" class="onesteporder-products-remove" id="RemoveElement{$_prdid}"><span></span></a>
+			</td>
+			</form>
+		</tr>
+		
+		{/section}
+		<tr class="onesteporder-products-tr-last">
+			<td colspan=3></td>
+			<td class="onesteporder-products-price"></td>
+			<td ></td>
+		</tr>
+	</table>
+		
+	<div class="onesteporder-products-pre-total-div">
+	
+	
+	<table class="onesteporder-products-pre-total-table" cellpadding="0" cellspacing="0">
+	
+		{if $smarty.const.CONF_DSC_COUPONS_ENABLED eq 'Y'}
+		<tr id="CouponTR" class="onesteporder-products-pre-total-tr-discount">
+			<td class="onesteporder-products-pre-total-td1">
+				<div class="{if $current_coupon ne '0'}system_DisplayNone{/if} system_CouponDivForm">
+					Купон на скидку: <a href="javascript:void(0);" onClick="ShowCouponField();">{"btn_add"|translate}</a>
+					<div class="onesteporder-coupon-field">
+						<input type="text" name="CouponCodeInput" id="CouponCodeInput" value="" onBlur="ApplyCoupon();" size="12" maxlength="10" class="onesteporder-coupon-field-input" />
+						<input type="button" onClick="ApplyCoupon();" id="CouponCodeButton" value='{"btn_apply"|translate}' class="onesteporder-contact-button" />
+					</div>
+				</div>
+				<div class="{if $current_coupon eq '0'}system_DisplayNone{/if} system_CouponDivResult">
+					Купон на скидку: <span id="CouponCode">{$current_coupon}</span> <a href="javascript:void(0);" onClick="DeleteCoupon();">{"btn_change"|translate}</a>
+				</div>
+			</td>
+			<td class="onesteporder-products-pre-total-td2">
+				<span id="CouponWrong" class="system_DisplayNone">{"lbl_wrong_coupon"|translate}</span>
+				<span id="CouponProcessing" class="system_DisplayNone">{"lbl_processing_coupon"|translate}</span>
+				<div class="{if $current_coupon eq '0'}system_DisplayNone{/if} system_CouponDivResult"> - <span id="CouponPrice">{$coupon_discount}</span></div>
+			</td>
+			<td class="onesteporder-products-pre-total-td3"></td>
+		</tr>
+		{/if}
+		<tr class="onesteporder-products-pre-total-tr-discount">
+			<td class="onesteporder-products-pre-total-td1">{"onesteporder_discount"|translate}:</td>
+			<td class="onesteporder-products-pre-total-td2">
+				<div {if $cart_discount eq ''}class="system_DisplayNone"{/if} id="CartDiscountDiv">
+					<span id="CartDiscountPersent">{$discount_percent|string_format:'%0.1f%%'}</span> - <span id="CartDiscount">{$cart_discount}</span>
+				</div>
+			</td>
+			<td class="onesteporder-products-pre-total-td3"></td>
+		</tr>
+			
+		<tr class="onesteporder-products-pre-total-tr-total">
+			<td class="onesteporder-products-pre-total-td1">{"onesteporder_total_cart_element"|translate}:</td>
+			<td class="onesteporder-products-pre-total-td2"><span id="TotalItemPrice">{$cart_total}</span></td>
+			<td class="onesteporder-products-pre-total-td3"></td>
+		</tr>
+	</table>
+	
+	{if $PAGE_VIEW eq 'noframe' && $smarty.get.ordering != 'yep'}
+		<input type="submit" id="SubmitOrdering{$type}"  value="{'onesteporder_order'|translate}" class="onesteporder-noframe-ordering-button" onclick="parent.location.href='?ukey=cart&view=noframe&ordering=yep'"/>
+	{/if}		
+	</div>
+
+	
+	
+	
+	{if $smarty.get.ordering == 'yep' || $PAGE_VIEW ne 'noframe'}
+	{if ($smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "fast" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "standart") && $log}
+		{assign var="liwidth" value="100"}	
+		{assign var="infwidth" value="100"}
+	{elseif ($smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all" && $log) || (($smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "fast" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "standart") && !$log)}
+		{assign var="liwidth" value="50"}
+		{assign var="infwidth" value="49.5"}
+		
+	{elseif $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all" && !$log}
+		{assign var="liwidth" value="33.3333"}
+		{assign var="infwidth" value="32.3333"}
+	{/if}
+	
+	{if ($smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all" || !$log) || $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "no"}
+		<table cellpadding="0" cellspacing="0" border="0" width=100%>
+			<tr>
+			<td style="width:210px;" class="onesteporder-order-types-leftside">
+				<div class="onesteporder-block-title">{"my_sposob_oformlenia"|translate}:</div>
+			</td>
+			<td>
+				<div class="onesteporder-order-types" >
+					<ul>
+					{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "fast" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all"}
+						<li style="width:{$liwidth}%;"><a href="javascript:void(0);" onclick="SelectOrderingType(this, '1');" class="system_TabOrderingType {if $POST.ordering eq 'fast'}system_TabOrderingTypeCurrent{elseif $POST.ordering eq 'standart' || ($smarty.get.login_form eq '1'  && !$log)  || $YandexAdress}{elseif $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "fast"}system_TabOrderingTypeCurrent{/if}" >
+						{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "fast"}{"onesteporder_order"|translate}{else}{"onesteporder_fast_type"|translate}{/if}
+						</a></li>
+					{/if}
+					
+					{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "standart" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all"}
+						<li style="width:{$liwidth}%;"><a href="javascript:void(0);" onclick="SelectOrderingType(this, '2');" class="system_TabOrderingType {if $POST.ordering eq 'standart'  || $YandexAdress }system_TabOrderingTypeCurrent{elseif $POST.ordering eq 'fast' || ($smarty.get.login_form eq '1' && !$log)}{elseif $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "standart"}system_TabOrderingTypeCurrent{/if}" >
+						{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "standart"}{"onesteporder_order"|translate}{else}{"onesteporder_standart_type"|translate}{/if}
+						</a></li>
+					{/if}
+					
+					{if !$log}
+						<li style="width:{$liwidth}%;"><a href="javascript:void(0);" onclick="SelectOrderingType(this, '3');" class="system_TabOrderingType {if $POST.ordering eq 'standart' || $POST.ordering eq 'fast' || $YandexAdress}{elseif $smarty.get.login_form eq '1'  && !$log}system_TabOrderingTypeCurrent{else}{/if}">{"onesteporder_auth_type"|translate}</a></li>
+					{/if}
+					</ul>
+				</div>	
+			</td></tr>
+		</table>
+		<div class="onesteporder-order-types-information" >
+			<table cellpadding="0" cellspacing="0" border="0" width=100%>
+			<tr>
+				<td style="width:210px;"  class="onesteporder-order-types-leftside">
+					<div class="onesteporder-order-types-information0" ></div>
+				</td>
+				<td>
+					{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "fast" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all"}
+						<div class="onesteporder-order-types-information1" style="width:{$infwidth}%;"><div class="onesteporder-order-types-information-padding">
+							<span class="{if $POST.ordering eq 'fast'}current{elseif $POST.ordering eq 'standart' || ($smarty.get.login_form eq '1'  && !$log)  || $YandexAdress}{elseif $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "fast"}current{/if}"></span><div class="onesteporder-order-desc">{"my_tab_fast"|translate}</div>
+						</div></div>
+					{/if}
+
+					{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "standart" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all"}
+						<div class="onesteporder-order-types-information2" style="width:{$infwidth}%;"><div class="onesteporder-order-types-information-padding">
+							<span class="{if $POST.ordering eq 'standart'  || $YandexAdress }current{elseif $POST.ordering eq 'fast' || ($smarty.get.login_form eq '1' && !$log)}{elseif $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "standart"}current{/if}"></span>
+							<div class="onesteporder-order-desc">{"my_tab_full"|translate}</div>
+						</div></div>
+					{/if}
+
+					{if !$log}
+						<div class="onesteporder-order-types-information3" style="width:{$infwidth}%;" ><div class="onesteporder-order-types-information-padding">
+							<span class="{if $POST.ordering eq 'standart' || $POST.ordering eq 'fast' || $YandexAdress}{elseif $smarty.get.login_form eq '1'  && !$log}current{else}{/if}"></span><div class="onesteporder-order-desc">{"my_tab_auth"|translate}</div>
+						</div></div>
+					{/if}
+				</td>
+			</tr>
+			<tr class="onesteporder-order-types-information-array-tr">
+				<td style="width:210px;"  class="onesteporder-order-types-leftside">
+					<div class="onesteporder-order-types-information0" ></div>
+				</td>
+				<td>
+					{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "fast" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all"}
+						<div class="onesteporder-order-types-information-array {if $POST.ordering eq 'fast'}onesteporder-order-types-information-array-visible{elseif $POST.ordering eq 'standart' || ($smarty.get.login_form eq '1'  && !$log)  || $YandexAdress}{elseif $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "fast"}onesteporder-order-types-information-array-visible{/if}" style="width:{$infwidth}%;" id="onesteporder-order-types-information-array1"></div>
+					{/if}
+
+					{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "standart" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all"}
+						<div class="onesteporder-order-types-information-array {if $POST.ordering eq 'standart'  || $YandexAdress }onesteporder-order-types-information-array-visible{elseif $POST.ordering eq 'fast' || ($smarty.get.login_form eq '1' && !$log)}{elseif $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "standart"}onesteporder-order-types-information-array-visible{/if}" style="width:{$infwidth}%;"  id="onesteporder-order-types-information-array2"></div>
+					{/if}
+
+					{if !$log}
+						<div class="onesteporder-order-types-information-array {if $POST.ordering eq 'standart' || $POST.ordering eq 'fast' || $YandexAdress}{elseif $smarty.get.login_form eq '1'  && !$log}onesteporder-order-types-information-array-visible{else}{/if}" style="width:{$infwidth}%;"  id="onesteporder-order-types-information-array3"></div>
+					{/if}
+				</td>
+			</tr>
+			</table>
+		</div>
+	{/if}
+
+
+	{$MessageBlock}
+
+
+	{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "fast" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all"}
+	<div id="FastOrdering" class="{if $POST.ordering eq 'fast'}{elseif $POST.ordering eq 'standart' || ($smarty.get.login_form eq '1' && !$log) || $YandexAdress}system_DisplayNone{elseif $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "standart" || $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "no"}system_DisplayNone{/if}">
+		<form action="{''|set_query_html}" name="ShoppingCartFormFast" method="post" target="_self" id="ShoppingCartFormFast">
+		<input type="hidden" name="ordering" value="fast" />
+			<div class="onesteporder-contact-div">
+				{include file="onesteporder/contact.html" type=Fast fields=$FieldsFast}
+			</div>
+			<div class="onesteporder-fast-div">
+				{include file="onesteporder/footer.html" type=Fast } 
+			</div>
+		</form>
+	</div>
+	{/if}
+	
+	{if $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "standart" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all"}
+	<div id="StandartOrdering" class="{if $POST.ordering eq 'standart' || $YandexAdress }{elseif $POST.ordering eq 'fast' || ($smarty.get.login_form eq '1' && !$log) || $YandexAdress}system_DisplayNone{elseif $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "fast" || $smarty.const.CONF_ONESTEPORDER_SHOW_DEFAULT eq "no"}system_DisplayNone{/if}" >
+		<form action="{''|set_query_html}" name="ShoppingCartFormStandart" method="post" target="_self" id="ShoppingCartFormStandart">
+		<input type="hidden" name="ordering" value="standart" />
+			<div class="onesteporder-contact-div">{include file="onesteporder/contact.html" type=Standart fields=$FieldsStandart}</div>
+			<div class="onesteporder-delivery-n-payment-div">
+				<div id="ShippingMethods">
+					<div class="onesteporder-loading">Загрузка</div>
+				</div>
+				<div id="BillingMethods"></div>
+			</div>
+			{include file="onesteporder/footer.html" type=Standart} 
+		</form>
+	</div>
+	{/if}
+	
+
+	{if !$log}	
+	<div id="LoginOrdering" class="{if $POST.ordering eq 'standart' || $POST.ordering eq 'fast'}system_DisplayNone{elseif $smarty.get.login_form eq '1'  AND !$log}{else}system_DisplayNone{/if}">
+		{$MessageBlock__auth}
+		<form action="{''|set_query_html}" method="post">
+			<input name="auth" value="yep" type="hidden" />
+			<div class="onesteporder-block-title">{"cpt_lbl_authorization"|translate}:</div>
+
+			<table cellspacing="0" cellpadding="0" border="0" class="onesteporder-contact-table">
+				<tr class="onesteporder-contact-tr-delay"><td colspan="2"></td></tr>
+				<tr class="onesteporder-contact-tr">
+					<td class="onesteporder-contact-td1">Логин:</td>
+					<td class="onesteporder-contact-td2"><input type="text" name="auth[Login]" value="{$auth.Login|escape:'html'}"  class="onesteporder-contact-input" /></td>
+				</tr>
+				<tr class="onesteporder-contact-tr">
+					<td class="onesteporder-contact-td1">Пароль:</td>
+					<td class="onesteporder-contact-td2"><input name="auth[cust_password]" type="password"  class="onesteporder-contact-input" /></td>
+				</tr>
+				<tr class="onesteporder-contact-tr-last">
+					<td colspan=2 class="onesteporder-contact-td2" style="text-align:right;"><input value='{"cpt_lbl_authorization"|translate}' type="submit" class="onesteporder-contact-button" /></td>
+				</tr>
+				<tr class="onesteporder-contact-tr-delay"><td colspan="2"></td></tr>
+			</table>
+		</form>
+	</div>
+	{/if}	
+	{/if}
+	
+</div>
+{else}
+	<div class="message_empty">{"cart_cart_is_empty"|translate}<br><a href='javascript:void(0);' {if $PAGE_VIEW eq 'noframe' && $smarty.get.ordering != 'yep'}onclick='javascript:parent.sswgt_CartManager.hide(true);return false;'{else}onclick='history.go(-1);'{/if}>{"btn_back_to_shopping"|translate}</a></div>
+{/if}
+</div>
+<div class="system_DisplayNone message_empty" id="EmptyCartMessage">{"cart_cart_is_empty"|translate}<br><a href='javascript:void(0);' {if $PAGE_VIEW eq 'noframe' && $smarty.get.ordering != 'yep'}onclick='javascript:parent.sswgt_CartManager.hide(true);return false;'{else}onclick='history.go(-1);'{/if}>{"btn_back_to_shopping"|translate}</a></div>
+</div>
+
+{/if}
+
+<script type="text/javascript" language="javascript">
+{if $PAGE_VIEW eq 'noframe'}
+	{if $ProductsNum}
+		$('#shpcrtgc', window.parent.document).html('{$ProductsNum} {"srch_products_plural"|translate}');
+		$('#shpcrtca', window.parent.document).html('{$cart_total}');
+	{else}
+		$('#shpcrtgc', window.parent.document).html('{"cart_content_empty"|translate}');
+		$('#shpcrtca', window.parent.document).html('&nbsp;');
+	{/if}
+{/if}
+</script>
+

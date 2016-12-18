@@ -1,0 +1,59 @@
+<div class="onesteporder-block-title">Способы оплаты:</div>	
+
+{if $payment_methods}
+	{literal}
+	<script>
+		RadioStyle('payment');
+	</script>
+	{/literal}
+
+	{assign var="countPayment" value=0}
+	<table cellspacing="0" cellpadding="0" border="0" class="onesteporder-shipping-n-payment-table">
+	{foreach from=$payment_methods item=_payment_method name=pm}
+	{assign var="countPayment" value=$countPayment+1}
+	<tr class="onesteporder-shipping-n-payment-tr">
+		<td class="onesteporder-shipping-n-payment-td{if $smarty.foreach.pm.last}-last{/if}">
+		
+			<div class="onesteporder-shipping-n-payment-radio">
+				<input name="paymentMethodID" id="payment-method-{$_payment_method.PID}" value="{$_payment_method.PID}"  type="radio" {if $POST.paymentMethodID == $_payment_method.PID}checked{/if}>
+				<label for="payment-method-{$_payment_method.PID}"></label>
+			</div>
+			
+			{if $_payment_method.logo}
+			<div class="onesteporder-shipping-n-payment-logo">
+				<label for="payment-method-{$_payment_method.PID}">
+					<img src="{$_payment_method.logo|escape:'html'}" alt="{$_payment_method.Name|escape:'html'}" title="{$_payment_method.Name|escape:'html'}" />
+				</label>
+			</div>
+			{/if}
+			
+			<div class="onesteporder-shipping-n-payment-name">
+				<label for="payment-method-{$_payment_method.PID}">{$_payment_method.Name}</label>
+			</div>
+			
+			{if $_payment_method.description}
+			<div class="onesteporder-shipping-n-payment-desc">
+				{$_payment_method.description}
+			</div>
+			{/if}	
+		</td>
+	</tr>
+	{/foreach}
+	
+	{if $countPayment eq 0}
+	<tr class="onesteporder-shipping-n-payment-tr">
+		<td class="onesteporder-shipping-n-payment-td-last">
+		<div class="message_empty">{"checkout_no_payment_methods"|translate}</div>
+		</td>
+	</tr>
+	{/if}
+	</table>	
+{else}
+	<table cellspacing="0" cellpadding="0" border="0" class="onesteporder-shipping-n-payment-table">
+	<tr class="onesteporder-shipping-n-payment-tr">
+		<td class="onesteporder-shipping-n-payment-td-last">
+			<div class="message_empty">{"checkout_no_payment_methods"|translate}</div>
+		</td>
+	</tr>
+	</table>
+{/if}

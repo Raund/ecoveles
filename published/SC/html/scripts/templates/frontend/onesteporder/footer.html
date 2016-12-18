@@ -1,0 +1,28 @@
+
+
+{if $type == 'Standart'}
+	
+	<div class="{if $type == 'Standart'}system_DisplayNone{/if}  onesteporder-products-total-div" id="SubmitOrderingDiv{$type}">
+		<div class="onesteporder-products-total">
+			<div class="onesteporder-products-total-div2" id="TotalOrderPrice">{$cart_total}</div>
+			<div class="onesteporder-products-total-div1">{"onesteporder_total_cart_standart"|translate}:</div>
+		</div>
+		
+		<input type="hidden" value="{$TotalItemPriceWhthoutUnits}" id="TotalOrderPriceInput">
+		
+		<input type="button" id="SubmitOrdering{$type}"  onClick="CheckBeforeSubmit('#ShoppingCartForm{$type}');" value="{'onesteporder_order'|translate}" class="onesteporder-products-total-submit" />
+	</div>
+	
+{elseif $type== 'Fast'}
+	
+	<div class="onesteporder-products-total-div-fast" id="SubmitOrderingDiv{$type}">
+		<div class="onesteporder-products-total-fast">
+			<div class="onesteporder-products-total-div2-fast" id="TotalOrderPriceFast">{$cart_total}</div>
+			<div class="onesteporder-products-total-div1-fast">{"onesteporder_total_cart_fast"|translate}:</div>
+		</div>
+		
+		<input type="hidden" value="{$TotalItemPriceWhthoutUnits}" id="TotalOrderPriceInput">
+		
+		<input type="button" id="SubmitOrdering{$type}"  onClick="CheckBeforeSubmit('#ShoppingCartForm{$type}');" value="{'onesteporder_order'|translate}" class="onesteporder-products-total-submit-fast" />
+	</div>
+{/if}

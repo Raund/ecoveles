@@ -1,0 +1,16 @@
+
+
+.onesteporder-block-title, .onesteporder-block-title-nobg, .onesteporder-remove-all-elements a span, a.onesteporder-products-remove span, .onesteporder-order-types-information1, .onesteporder-order-types-information2, .onesteporder-order-types-information3, .onesteporder-contact-div, .onesteporder-delivery-n-payment-div, .onesteporder-contact-yandex, .custom_radio, .custom_radio_active, .custom_checkbox, .custom_checkbox_active, .onesteporder-shipping-n-payment-radio, .onesteporder-shipping-n-payment-logo, .onesteporder-shipping-n-payment-name, .onesteporder-products-total-submit-icon, .onesteporder-products-total-submit-icon-fast, .onesteporder-fast-div, .onesteporder-products-total-fast, .onesteporder-products-total-div1-fast, .onesteporder-products-total-div2-fast, a.onesteporder-contact-adresses-remove span, .onesteporder-configuration-name-current, .onesteporder-order-types-information-array, .onesteporder-order-types-information-array-visible, .onesteporder-configuration-name-current, .onesteporder-fast-div, .onesteporder-portable .onesteporder-products-total-div-fast, .onesteporder-portable .onesteporder-products-total{
+	//display:inline;
+	//zoom:1;
+}
+
+
+.custom_checkbox, .custom_checkbox_active{ width: 16px; }
+.custom_radio, .custom_radio_active{ width:16px; }
+.radio{display:inline; width:0px; height:0px; line-height:0px; font-size:0px; position:absolute;}
+.checkbox{display:inline; width:0px; height:0px; line-height:0px; font-size:0px; position:absolute;}
+
+*:first-child+html  .onesteporder-products-total-div2-fast{
+	margin-right:40px;
+}

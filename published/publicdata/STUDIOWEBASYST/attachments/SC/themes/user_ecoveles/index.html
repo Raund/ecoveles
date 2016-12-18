@@ -1,0 +1,127 @@
+<div id="m-header" class="mobile">
+    <a href="/" class="logo">EcoVeles</a>
+    <a href="#" class="show_menu">Меню</a>
+</div>
+<div id='page'>
+<table cellpadding="0" cellspacing="0" border="0" id="main">
+        <tr>
+            <td class="menu1 topmenu" colspan="3">
+                <div class="frst">
+                    <div class="left"><!-- cpt_container_start -->{cpt_auxpages_navigation select_pages='selected' auxpages='14:15:17:16:18:5:3' view='horizontal' overridestyle=':qsve9u'}<!-- cpt_container_end --></div>
+                    <div class="right lang"><!-- cpt_container_start -->{cpt_language_selection view='flags' overridestyle=':9fryqp'}<!-- cpt_container_end --></div>
+                    <div class="right auth"><a href="/index.php?ukey=auth">{"btn_login"|translate}</a></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1"><div id="logo"><!-- cpt_container_start -->{cpt_logo file='Logotype3.png' overridestyle=':7yr7a1'}<!-- cpt_container_end --></div></td>
+            <td colspan="2">
+                 <table cellpadding="0" cellspacing="0" border="0" id="header">
+                 <tr>
+                      <td class="phones" colspan="2"><div class="frst"><div>(066)931-15-15</div><div>(096)361-15-15</div><div>(063)734-15-15</div>
+                      <div class="txthdr clear">{"my_rabotaem"|translate}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"my_dostavka"|translate}</div>
+                      </div></td>
+                      <td class="cart" width="140px"><div class="frst"><div class="box"><!-- cpt_container_start -->{cpt_shopping_cart_info overridestyle=':bflnp0'}<!-- cpt_container_end --></div></div></td>
+                      <td class="callback" width="160px"><div class="frst"><a href="javascript:openFadeIFrame('/callback/index.php'); resizeFadeIFrame(270, 300);">{"my_callback"|translate}</a></div></td>
+
+                 </tr>
+                 <tr>
+                      <td width="445px"><div class="frst"><!-- cpt_container_start -->{cpt_product_search overridestyle=':mxuni3'}<!-- cpt_container_end --></div></td>
+                      <td class="menu1 xtra" colspan="3" height="53px">
+                          <div class="frst">
+                              <div class="left"><!-- cpt_container_start -->{cpt_auxpages_navigation select_pages='selected' auxpages='6:7:8' view='horizontal' overridestyle=':t5apqg'}<!-- cpt_container_end --></div>
+                              <div class="right"></div>
+                              <div class="clear"></div>
+                          </div>
+                      </td>
+                 </tr>
+                 </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="l_column">
+            {if $smarty.get.categoryID ne ''}
+                <div class="frst" style="margin-top:10px">
+                <h1 style="margin-bottom:10px">{"lbl_filter"|translate}</h1>
+                    <!-- cpt_container_start[id=7] -->{cpt_prfilter_index_block position='left' colomns='1' category='564' template='1' showselected='false' overridestyle=':1q4m0e'}<!-- cpt_container_end -->
+                </div>
+            {/if}
+                <div class="frst">
+                    <h1>{"catalog"|translate}</h1>
+                    <!-- cpt_container_start -->
+                    {cpt_category_tree overridestyle=':irkjec'}
+                    <a href="{"?ukey=news"|set_query}"><h4>{"news"|translate}</h4></a>
+                    <div class="news_box">
+                    {cpt_news_short_list news_num='3' overridestyle=':77n9ab'}
+                    </div>
+                    <!-- cpt_container_end -->
+                </div>
+            </td>
+            <td class="c_column">
+<!-- SLIDERR -->
+            {if $main_content_template=="home1.html"}
+<div class="slider slider1">
+			<div class="sliderContent">
+				<div class="item">
+					<img src="/kdm/slider/img/img1.jpg" alt="" />
+				</div>
+				<div class="item">
+					<img src="/kdm/slider/img/img1.jpg" alt="" />
+				</div>
+				<div class="item">
+					<img src="/kdm/slider/img/img1.jpg" alt="" />
+				</div>
+
+			</div>
+		</div>
+        <div class="clear"></div>
+            {/if}
+<!-- SLIDER -->
+        <div class="frst" style="margin-top:0px;">
+            <!-- cpt_container_start -->{cpt_maincontent overridestyle=':etursx'}<!-- cpt_container_end --></div>
+
+            <td class="r_column"><div class="frst"><!-- cpt_container_start --><!-- cpt_container_end --></div></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                &nbsp;
+
+                          <table id="tfooter" width="900px" style="margin-top:40px">
+                          <tr>
+                              <td align="center" width="200px">
+                                  <div class="share42init"></div>
+                                  <script type="text/javascript" src="/kdm/share42/share42.js"></script>
+                              </td>
+                              <td>
+                              <div id="fboxmenu">
+                              <!-- cpt_container_start -->{cpt_auxpages_navigation select_pages='selected' auxpages='4:9:10:11:12:13' view='horizontal' overridestyle=':t5apqg'}<!-- cpt_container_end -->
+                              </div>
+                              </td>
+                              <td width="200px" align="left">
+                                  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                                  <g:plusone annotation="inline" width="200"></g:plusone>
+                              </td>
+                          </tr>
+                          </table>
+            </td>
+        </tr>
+    </table>
+<p id="back-top">
+	<a href="{php} echo $_SERVER['REQUEST_URI']; {/php}#top"><span></span>BBEPX</a>
+</p>
+</div>
+<div class="mobile" id="m-menu">
+    <div class="menu_1"><!-- cpt_container_start -->{cpt_auxpages_navigation select_pages='selected' auxpages='14:15:17:16:18:5:3' view='vertical' overridestyle=':qsve9u'}<!-- cpt_container_end --></div>
+    <div class="menu_2"><!-- cpt_container_start -->{cpt_auxpages_navigation select_pages='selected' auxpages='6:7:8' view='vertical' overridestyle=':t5apqg'}<!-- cpt_container_end --></div>
+    <div class="menu_3"><!-- cpt_container_start -->{cpt_auxpages_navigation select_pages='selected' auxpages='4:9:10:11:12:13' view='vertical' overridestyle=':t5apqg'}<!-- cpt_container_end --></div>
+    <div class="menu_last">
+        <div class="left"><a href="/index.php?ukey=auth">{"btn_login"|translate}</a></div>
+        <div class="right"><!-- cpt_container_start -->{cpt_language_selection view='flags' overridestyle=':9fryqp'}<!-- cpt_container_end --></div>
+    </div>
+    <div class="menu_close">
+        {"btn_close"|translate}
+    </div>
+    <div class="clear"></div>
+</div>

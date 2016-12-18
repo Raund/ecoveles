@@ -1,0 +1,94 @@
+# User custom .htaccess config (/published/wbsadmin/html/configs/.htaccess.user)
+
+<FilesMatch "\.md5$">
+    Deny from all
+</FilesMatch>
+
+DirectoryIndex index.php
+Options -Indexes
+# Comment the following line, if option Multiviews not allowed here
+# Options -MultiViews
+
+AddDefaultCharset utf-8
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+	
+	RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_URI} !(.*)/$
+	RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+	
+	RewriteCond %{HTTP_HOST} ^www\.ecoveles\.com.ua$ [NC]
+	RewriteCond %{REQUEST_URI} !^/robots.*
+	RewriteRule ^(.*)$ http://ecoveles.com.ua/$1 [R=301,L]
+
+	RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.php\ HTTP/
+	RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
+	
+    # Uncomment the following line, if you are having trouble
+    #RewriteBase /
+
+    RewriteCond %{REQUEST_URI} !\.(js|css|jpg|jpeg|gif|png)$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteRule ^(.*)$ index.php [L,QSA]
+</ifModule>
+
+<ifModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|js|css)$">
+	Header set Cache-Control "max-age=3153600, public"
+    </FilesMatch>
+</ifModule>
+
+
+
+# WebAsyst .htaccess config
+AddDefaultCharset UTF-8
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+#shop
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteRule ^shop/(repo_themes|js|3rdparty|images_common|products_pictures|images|themes|css)/(.*)$ published/SC/html/scripts/$1/$2?frontend=1 [L]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteRule ^shop/(imgval.php|wbs_messageserserver.php) published/SC/html/scripts/$1 [L]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteRule ^(repo_themes|js|3rdparty|images_common|products_pictures|images|themes|css)/(.*)$ published/SC/html/scripts/$1/$2?frontend=1 [L]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteRule ^(imgval.php|wbs_messageserserver.php|get_file.php) published/SC/html/scripts/$1 [L]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteCond  %{REQUEST_FILENAME} !-d
+RewriteRule ^shop(.*) published/SC/html/scripts/$1&frontend=1 [L]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteCond  %{REQUEST_FILENAME} !-d
+RewriteRule ^photos/(album|view)/(.*) photos/index.php?q=$1/$2 [L,QSA]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteCond  %{REQUEST_FILENAME} !-d
+RewriteRule ^photos/fullsize/(.*)/(.*) photos/getfullsize.php?filename=$1&hash=$2 [L,QSA]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteCond  %{REQUEST_FILENAME} !-d
+RewriteRule ^photos/(.+)$ photos/index.php?q=$1 [L,QSA]
+
+#common
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteRule ^login/(.*) login/index.php [L]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteRule ^installer/(.*) installer/index.php [L]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteCond  %{REQUEST_FILENAME} !-d
+RewriteRule ^published/$ published/index.php [L]
+
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteCond  %{REQUEST_FILENAME} !-d
+RewriteCond  %{REQUEST_URI} !^published
+RewriteRule (.*) published/SC/html/scripts/index.php?__furl_path=$1&frontend=1 [QSA]

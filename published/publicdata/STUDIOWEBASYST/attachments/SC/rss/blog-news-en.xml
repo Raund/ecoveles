@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+	<channel>
+		<title>Блог / Новости ― Садовый Центр EcoVeles</title>
+		<link>http://ecoveles.com.ua/blog/</link>
+		<description><![CDATA[Блог / Новости]]></description>
+		<lastBuildDate>Mon, 06 Jan 2014 11:13:08 +0200</lastBuildDate>
+
+		<item>
+			<title>Ми відкрились!</title>
+			<description><![CDATA[<p>Здесь вы можете написать информацию о вашем новом интернет-магазине, а также отправить эту новость вашим клиентам по электронной почте.</p>]]></description>
+			<content:encoded><![CDATA[<p>Здесь вы можете написать информацию о вашем новом интернет-магазине, а также отправить эту новость вашим клиентам по электронной почте.</p>]]></content:encoded>
+			<pubDate>Fri, 18 Apr 2008 13:20:48 +0300</pubDate>
+			<link>http://ecoveles.com.ua/blog/1/</link>
+			<guid>http://ecoveles.com.ua/blog/1/</guid>
+		</item>
+
+	</channel>
+</rss>

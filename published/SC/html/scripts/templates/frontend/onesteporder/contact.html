@@ -1,0 +1,379 @@
+
+{if ($smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "all" || $smarty.const.CONF_ONESTEPORDER_TYPES_ORDERING eq "standart") && $smarty.const.CONF_ONESTEPORDER_YANDEX_ADRESS_ENABLE} 
+<div class="onesteporder-contact-yandex"><a href="http://market.yandex.ru/addresses.xml?callback=http%3A%2F%2F{$smarty.const.CONF_SHOP_URL}%2Fcart%2F&size=mini&type=json" {if $PAGE_VIEW eq 'noframe'}TARGET="_parent"{/if}>Заполнить поля с помощью <span class="onesteporder-contact-yandex-lable"><span>Я</span>ндекс</span></a></div>
+{/if}
+	
+
+<div class="onesteporder-block-title">Контактная информация:</div>
+	
+	
+<table cellspacing="0" cellpadding="0" border="0" class="onesteporder-contact-table">
+	
+	<tr class="onesteporder-contact-tr-delay"><td colspan="2"></td></tr>
+	{if $type eq "Standart" && !$log}
+		
+		<tr class="onesteporder-contact-tr-first">
+			<td colspan="2">
+				<input name="permanent_registering" {if $POST.permanent_registering} checked{/if} type="checkbox" onClick="showRegistrationForm(this);" id="permanent_registering{$type}" class="onesteporder-checkbox" />
+				<label for="permanent_registering{$type}">{'checkout_permanent_registering'|translate|replace:'%SHOPNAME%':$smarty.const.CONF_SHOP_NAME}</label>
+			</td>
+		</tr>
+		<tr class="onesteporder-contact-tr-delay"><td colspan="2"></td></tr>
+	{/if}
+
+
+	{if $type eq "Standart" && !$log}
+		<tbody class="{if !$POST.permanent_registering}system_DisplayNone{/if}" id="RegistrationFields{$type}">
+			<tr class="onesteporder-contact-tr">
+				<td class="onesteporder-contact-td1"><span>*</span>{lbl_usr_custinfo_login}:</td>
+				<td class="onesteporder-contact-td2">
+					<input name="customer_info[Login]" value="{$POST.customer_info.Login|escape:'html'}" type="text" class="onesteporder-contact-input" />
+				</td>
+			</tr>
+			<tr class="onesteporder-contact-tr">
+				<td class="onesteporder-contact-td1"><span>*</span>{lbl_usr_custinfo_password}:</td>
+				<td class="onesteporder-contact-td2">
+					<input name="customer_info[cust_password]" value="{$POST.customer_info.cust_password|escape:'html'}" type="password" class="onesteporder-contact-input" />
+				</td>
+			</tr>
+			<tr class="onesteporder-contact-tr">
+				<td class="onesteporder-contact-td1"><span>*</span>{lbl_usrreg_customer_confirm_password}:</td>
+				<td class="onesteporder-contact-td2">
+					<input name="customer_info[cust_password1]" value="{$POST.customer_info.cust_password1|escape:'html'}" type="password" class="onesteporder-contact-input" />
+				</td>
+			</tr>
+		</tbody>
+	{/if}
+
+	{if $fields.first_name eq 1}
+	<tr id="ShippingFirstNameTR{$type}" class="onesteporder-contact-tr">
+		<td class="onesteporder-contact-td1"><span>*</span>{lbl_usr_custinfo_first_name}:</td>
+		<td class="onesteporder-contact-td2"><input name="customer_info[first_name]" value="{if $POST.customer_info.first_name}{$POST.customer_info.first_name}{elseif $YandexAdress.first_name}{$YandexAdress.first_name}{elseif $address.first_name}{$address.first_name}{else}{$customer_info_default.first_name}{/if}" type="text" id="first_name{$type}" class="onesteporder-contact-input" /></td>
+	</tr>
+	{else}
+		<input name="customer_info[first_name]" value="" type="hidden" id="first_name{$type}"  />
+	{/if}
+	
+		
+	
+	
+	{if $fields.last_name eq 1}
+	<tr id="ShippingLastNameTR{$type}" class="onesteporder-contact-tr">
+		<td class="onesteporder-contact-td1"><span>*</span>{lbl_usr_custinfo_last_name}:</td>
+		<td class="onesteporder-contact-td2"><input name="customer_info[last_name]" value="{if $POST.customer_info.last_name}{$POST.customer_info.last_name}{elseif $YandexAdress.last_name}{$YandexAdress.last_name}{elseif $address.last_name}{$address.last_name}{else}{$customer_info_default.last_name}{/if}" type="text" id="last_name{$type}" class="onesteporder-contact-input" /></td>
+	</tr>
+	{else}
+		<input name="customer_info[last_name]" value="" type="hidden"  id="last_name{$type}"   />
+	{/if}
+	
+	
+	
+	{if $fields.Email eq 1}
+	<tr class="onesteporder-contact-tr">
+		<td class="onesteporder-contact-td1"><span>*</span>{lbl_usr_custinfo_email}:</td>
+		<td class="onesteporder-contact-td2"><input name="customer_info[Email]" value="{if $POST.customer_info.Email}{$POST.customer_info.Email}{elseif $YandexAdress.Email}{$YandexAdress.Email}{elseif $customer_info_default.Email}{$customer_info_default.Email}{/if}" type="text" id="Email{$type}" class="onesteporder-contact-input" /></td>
+	</tr>
+	{else}
+		<input name="customer_info[Email]" value="{if $POST.customer_info.Email}{$POST.customer_info.Email}{elseif $YandexAdress.Email}{$YandexAdress.Email}{elseif $customer_info_default.Email}{$customer_info_default.Email}{/if}" type="hidden"  />
+	{/if}
+	
+	
+	{if $fields.Email eq 1 && $fields.subscribe eq 1 && !$log}
+	<tr class="onesteporder-contact-tr">
+		<td class="onesteporder-contact-td1"></td>
+		<td class="onesteporder-contact-td2">
+			<input name="customer_info[subscribed4news]" value="1"{if $POST.customer_info.subscribed4news || ($subscribed4news)} checked{/if} type="checkbox" style="width:auto;" id="subscribed4news{$type}" class="onesteporder-checkbox"/>
+			<label for="subscribed4news{$type}">{lbl_usrreg_subscribe_for_blognews}</label>
+		</td>
+	</tr>
+	{/if}
+	
+	
+	
+	{foreach from=$additional_fields item=_field}
+	{assign var=_field_name value="additional_field_`$_field.reg_field_ID`"}
+		{if $fields.$_field_name eq 1}
+		<tr class="onesteporder-contact-tr">
+			<td class="onesteporder-contact-td1">{if $_field.reg_field_required}<span>*</span>{/if}{$_field.reg_field_name}:</td>
+			<td class="onesteporder-contact-td2"><input type='text' name='customer_info[_custom_fields][{$_field.reg_field_ID}]' value='{if $POST.customer_info._custom_fields[$_field.reg_field_ID] ne ''}{$POST.customer_info._custom_fields[$_field.reg_field_ID]|escape:"html"}{elseif $YandexAdress.additional_fields[$_field.reg_field_ID] ne ''}{$YandexAdress.additional_fields[$_field.reg_field_ID]}{else}{section name=j loop=$customer_info_default.additional_field_values}{if $customer_info_default.additional_field_values[j].reg_field_ID == $_field.reg_field_ID}{$customer_info_default.additional_field_values[j].reg_field_value}{/if}{/section}{/if}' class="onesteporder-contact-input {if $smarty.const.CONF_ONESTEPORDER_QIWI_PHONE_FIELD eq $_field.reg_field_ID}phone{/if}" /></td>
+		</tr>
+		{else}
+			<input type='hidden' name='customer_info[_custom_fields][{$_field.reg_field_ID}]' value="{if $POST.customer_info._custom_fields[$_field.reg_field_ID] ne ''}{$POST.customer_info._custom_fields[$_field.reg_field_ID]|escape:"html"}{elseif $YandexAdress.additional_fields[$_field.reg_field_ID] ne ''}{$YandexAdress.additional_fields[$_field.reg_field_ID]}{else}{section name=j loop=$customer_info_default.additional_field_values}{if $customer_info_default.additional_field_values[j].reg_field_ID == $_field.reg_field_ID}{$customer_info_default.additional_field_values[j].reg_field_value}{/if}{/section}{/if}" />
+		{/if}
+	{/foreach}
+
+	
+	<input  name="addressID" value="{if $POST.addressID ne ''}{$POST.addressID}{elseif $address.addressID}{$address.addressID}{else}0{/if}"  type="hidden" id="addressID{$type}"  />
+	<tbody id="ContactInformation{$type}" >
+	
+	
+	{if $smarty.const.CONF_ADDRESSFORM_ADDRESS ne 2}
+		{if $fields.address eq 1}
+		<tr id="ShippingAdressTR{$type}" class="onesteporder-contact-tr">
+			<td class="onesteporder-contact-td1">{if $smarty.const.CONF_ADDRESSFORM_ADDRESS eq 0}<span>*</span>{/if}{lbl_str_address}:</td>
+			<td class="onesteporder-contact-td2"><textarea name="shipping_address[address]" rows="4" id="address{$type}" class="onesteporder-contact-textarea" >{if $POST.shipping_address.address}{$POST.shipping_address.address}{elseif $YandexAdress.address}{$YandexAdress.address}{else}{$address.address}{/if}</textarea></td>
+		</tr>
+		{else}
+			<input name="shipping_address[address]" value="" type="hidden"  id="address{$type}"  />
+		{/if}
+	{/if}
+	
+	
+	
+	{if $smarty.const.CONF_ADDRESSFORM_CITY ne 2}
+		{if $fields.city eq 1}
+		<tr id="ShippingCityTR{$type}" class="onesteporder-contact-tr">
+			<td class="onesteporder-contact-td1">{if $smarty.const.CONF_ADDRESSFORM_CITY eq 0}<span>*</span>{/if}{lbl_usr_custinfo_city}:</td>
+			<td class="onesteporder-contact-td2"><input name="shipping_address[city]" value="{if $POST.shipping_address.city}{$POST.shipping_address.city}{elseif $YandexAdress.city}{$YandexAdress.city}{else}{$address.city}{/if}" type="text" id="city{$type}" class="onesteporder-contact-input" /></td>
+		</tr>
+		{else}	
+			<input name="shipping_address[city]" value="" type="hidden"  id="city{$type}"  />
+		{/if}
+	{/if}
+	
+	
+	
+	{if $smarty.const.CONF_ADDRESSFORM_STATE ne 2}
+		{if $fields.state eq 1}
+		<tr id="ShippingZoneTR{$type}" class="onesteporder-contact-tr">
+			<td class="onesteporder-contact-td1">{if $smarty.const.CONF_ADDRESSFORM_STATE eq 0}<span>*</span>{/if}{lbl_usr_custinfo_state}:</td>
+			<td id="ShippingZoneTD{$type}" class="onesteporder-contact-td2">
+			{if !$zones}
+				<input name="shipping_address[state]" value="{$POST.shipping_address.state|default:$address.state}" type="text" id="stateStr{$type}" class="onesteporder-contact-input"   />
+			{else}
+				<select name="shipping_address[zoneID]" id="ShippingZone{$type}" onChange="ChangeState(this, '{$type}')" class="onesteporder-contact-select"  >
+				{foreach from=$zones item=_zone}
+					<option value="{$_zone.zoneID}" {if $POST.shipping_address.zoneID ne '' && $POST.shipping_address.zoneID == $_zone.zoneID}selected{elseif $_zone.zoneID == $address.zoneID} selected{/if}>{$_zone.zone_name|escape:'html'}</option>
+				{/foreach}
+				</select>
+			{/if}
+			</td>
+		</tr>
+		{else}
+			<input name="shipping_address[state]" value="" type="hidden"  id="ShippingZone{$type}"  />
+		{/if}
+	{/if}
+
+	{if $smarty.const.CONF_ADDRESSFORM_ZIP ne 2}
+		{if $fields.zip eq 1}
+		<tr id="ShippingZipTR{$type}" class="onesteporder-contact-tr">
+			<td class="onesteporder-contact-td1">{if $smarty.const.CONF_ADDRESSFORM_ZIP eq 0}<span>*</span>{/if}{"usr_custinfo_zip"|translate}:</td>
+			<td class="onesteporder-contact-td2"><input name="shipping_address[zip]" value="{if $POST.shipping_address.zip}{$POST.shipping_address.zip}{elseif $YandexAdress.zip}{$YandexAdress.zip}{else}{$address.zip}{/if}" id="zip{$type}" type="text"  class="onesteporder-contact-input"  /></td>
+		</tr>
+		{else}
+			<input name="shipping_address[zip]" value="" type="hidden"  id="zip{$type}"   />
+		{/if}
+	{/if}
+	
+	
+	{if $countries}
+		{if $fields.country eq 1}
+		<tr id="ShippingCountryTR{$type}" class="onesteporder-contact-tr">
+			<td class="onesteporder-contact-td1"><span>*</span>{"usr_custinfo_country"|translate}:</td>
+			<td class="onesteporder-contact-td2">
+				<select name="shipping_address[countryID]" onChange="ChangeCountry(this, '{$type}')"  id="ShippingCountry{$type}"  xAdress="{$address.countryID}" class="onesteporder-contact-select" >
+				{foreach from=$countries item=_country}
+					<option value="{$_country.countryID}"
+					{if $POST.shipping_address.countryID ne '' && $POST.shipping_address.countryID == $_country.countryID}
+						selected
+					{elseif $YandexAdress.countryID && $YandexAdress.countryID == $_country.country_name}
+						selected
+					{elseif $address.countryID}
+						{if $_country.countryID == $address.countryID}selected{/if}
+					{else}
+						{if $_country.countryID == $smarty.const.CONF_DEFAULT_COUNTRY}selected{/if}
+					{/if}
+					>{$_country.country_name|escape:'html'}</option>
+				{/foreach}
+				</select>
+			</td>
+		</tr>
+		{else}
+			<input name="shipping_address[countryID]" value="" type="hidden"  id="ShippingCountry{$type}"   xAdress="" />
+		{/if} 
+	{/if} 
+	
+	
+	</tbody>
+	
+		{if $fields.billing_as_shipping eq 1}
+		{if $smarty.const.CONF_ORDERING_REQUEST_BILLING_ADDRESS eq '1'}
+			<tr class="onesteporder-contact-tr">
+				<td class="onesteporder-contact-td1"></td>
+				<td class="onesteporder-contact-td2">
+					<input name="billing_as_shipping" {if $POST.billing_as_shipping || ($billing_as_shipping)} checked{/if} type="checkbox" style="width:auto;" id="billing_as_shipping{$type}" class="onesteporder-checkbox" onclick="BillingAdressForm('{$type}');" />
+					<label for="billing_as_shipping{$type}">Плательщик совпадает с получателем</label>
+				</td>
+			</tr>
+
+			
+			<tbody id="BillingAdress{$type}" class=" BillingAdress  {if $POST.billing_as_shipping || ($billing_as_shipping)} system_DisplayNone{/if}" >
+			
+			{if $fields.first_name eq 1}
+			<tr class="onesteporder-contact-tr onesteporder-contact-tr-billing">
+				<td class="onesteporder-contact-td1"><span>*</span>{lbl_usr_custinfo_first_name}:</td>
+				<td class="onesteporder-contact-td2"><input name="billing_address[first_name]" value="{if $POST.billing_address.first_name}{$POST.billing_address.first_name}{/if}" type="text"  class="onesteporder-contact-input" /></td>
+			</tr>
+			{else}
+				<input name="billing_address[first_name]" value="" type="hidden"  />
+			{/if}
+			
+			{if $fields.last_name eq 1}
+			<tr class="onesteporder-contact-tr onesteporder-contact-tr-billing">
+				<td class="onesteporder-contact-td1"><span>*</span>{lbl_usr_custinfo_last_name}:</td>
+				<td class="onesteporder-contact-td2"><input name="billing_address[last_name]" value="{if $POST.billing_address.last_name}{$POST.billing_address.last_name}{/if}" type="text" class="onesteporder-contact-input" /></td>
+			</tr>
+			{else}
+				<input name="billing_address[last_name]" value="" type="hidden"   />
+			{/if}
+			
+			
+			{if $smarty.const.CONF_ADDRESSFORM_ADDRESS ne 2}
+				{if $fields.address eq 1}
+				<tr class="onesteporder-contact-tr onesteporder-contact-tr-billing">
+					<td class="onesteporder-contact-td1">{if $smarty.const.CONF_ADDRESSFORM_ADDRESS eq 0}<span>*</span>{/if}{lbl_str_address}:</td>
+					<td class="onesteporder-contact-td2"><textarea name="billing_address[address]" rows="4" class="onesteporder-contact-textarea" >{if $POST.billing_address.address}{$POST.billing_address.address}{/if}</textarea></td>
+				</tr>
+				{else}
+					<input name="billing_address[address]" value="" type="hidden"  id="address{$type}"  />
+				{/if}
+			{/if}
+			
+			{if $smarty.const.CONF_ADDRESSFORM_CITY ne 2}
+				{if $fields.city eq 1}
+				<tr class="onesteporder-contact-tr onesteporder-contact-tr-billing">
+					<td class="onesteporder-contact-td1">{if $smarty.const.CONF_ADDRESSFORM_CITY eq 0}<span>*</span>{/if}{lbl_usr_custinfo_city}:</td>
+					<td class="onesteporder-contact-td2"><input name="billing_address[city]" value="{if $POST.billing_address.city}{$POST.billing_address.city}{/if}" type="text" class="onesteporder-contact-input" /></td>
+				</tr>
+				{else}	
+					<input name="billing_address[city]" value="" type="hidden"  />
+				{/if}
+			{/if}
+			
+				
+			{if $smarty.const.CONF_ADDRESSFORM_STATE ne 2}
+				{if $fields.state eq 1}
+				<tr id="BillingZoneTR{$type}" class="onesteporder-contact-tr onesteporder-contact-tr-billing">
+					<td class="onesteporder-contact-td1">{if $smarty.const.CONF_ADDRESSFORM_STATE eq 0}<span>*</span>{/if}{lbl_usr_custinfo_state}:</td>
+					<td id="BillingZoneTD{$type}" class="onesteporder-contact-td2">
+					{if !$zones}
+						<input name="billing_address[state]" value="{$POST.billing_address.state|default:$address.state}" type="text" class="onesteporder-contact-input"   />
+					{else}
+						<select name="billing_address[zoneID]" id="BillingZone{$type}" class="onesteporder-contact-select"  >
+						{foreach from=$zones item=_zone}
+							<option value="{$_zone.zoneID}" {if $POST.billing_address.zoneID ne '' && $POST.billing_address.zoneID == $_zone.zoneID}selected{/if}>{$_zone.zone_name|escape:'html'}</option>
+						{/foreach}
+						</select>
+					{/if}
+					</td>
+				</tr>
+				{else}
+					<input name="billing_address[state]" value="" type="hidden"  />
+				{/if}
+			{/if}
+
+			{if $smarty.const.CONF_ADDRESSFORM_ZIP ne 2}
+				{if $fields.zip eq 1}
+				<tr class="onesteporder-contact-tr onesteporder-contact-tr-billing">
+					<td class="onesteporder-contact-td1">{if $smarty.const.CONF_ADDRESSFORM_ZIP eq 0}<span>*</span>{/if}{"usr_custinfo_zip"|translate}:</td>
+					<td class="onesteporder-contact-td2"><input name="billing_address[zip]" value="{if $POST.billing_address.zip}{$POST.billing_address.zip}{/if}" type="text"  class="onesteporder-contact-input"  /></td>
+				</tr>
+				{else}
+					<input name="billing_address[zip]" value="" type="hidden"   />
+				{/if}
+			{/if}
+			
+			
+			{if $countries}
+				{if $fields.country eq 1}
+				<tr class="onesteporder-contact-tr onesteporder-contact-tr-billing">
+					<td class="onesteporder-contact-td1"><span>*</span>{"usr_custinfo_country"|translate}:</td>
+					<td class="onesteporder-contact-td2">
+						<select name="billing_address[countryID]" onChange="ChangeBillingCountry(this, '{$type}')"  xAdress="{$address.countryID}" class="onesteporder-contact-select" >
+						{foreach from=$countries item=_country}
+							<option value="{$_country.countryID}"
+							{if $POST.billing_address.countryID ne '' && $POST.billing_address.countryID == $_country.countryID}
+								selected
+							{else}
+								{if $_country.countryID == $smarty.const.CONF_DEFAULT_COUNTRY}selected{/if}
+							{/if}
+							>{$_country.country_name|escape:'html'}</option>
+						{/foreach}
+						</select>
+					</td>
+				</tr>
+				{else}
+					<input name="billing_address[countryID]" value="" type="hidden"   xAdress="" />
+				{/if} 
+			{/if} 
+			</tbody>
+		{/if}
+		{/if}
+
+	
+		
+	<tr class="onesteporder-contact-tr{if !$smarty.const.CONF_ENABLE_CONFIRMATION_CODE}-last{/if}">
+		<td class="onesteporder-contact-td1">Комментарии к заказу:</td>
+		<td class="onesteporder-contact-td2"><textarea name="order_comment"  id="OrderComment{$type}" class="onesteporder-contact-textarea" >{if $POST.order_comment}{$POST.order_comment}{else if $YandexAdress.comment}{$YandexAdress.comment}{/if}</textarea></td>
+	</tr>
+	
+	{if $smarty.const.CONF_ENABLE_CONFIRMATION_CODE}
+	<tr class="onesteporder-contact-tr-last">
+		<td class="onesteporder-contact-td1"><span>*</span>{"str_enter_ccode"|translate}</td>
+		<td class="onesteporder-contact-td2">
+			<img src="{$smarty.const.URL_ROOT}/imgval.php" alt="code" class="onesteporder-code-img" />
+			<input name="confirmation_code" value="" type="text" class="onesteporder-contact-input onesteporder-code-input"  >
+		</td>
+	</tr>
+	{/if}
+	
+	
+	
+	
+	<tr class="onesteporder-contact-tr-last">
+		<td colspan=2 class="onesteporder-contact-td-last"><span>*</span> - Поля обязательные для заполнения</td>
+	</tr>
+	
+	{if $fields.useradresses eq 1}
+	{if $addresses|@count > 1 && $log}
+		<tr class="onesteporder-contact-tr-last">
+			<td colspan=2 class="onesteporder-contact-td-last"><a href="javascript:void(0);" onclick="SelectUserAdresses('{$type}');">Показать все ваши адреса</a></td>
+		</tr>
+	{/if}
+	{/if}
+
+	<tr class="onesteporder-contact-tr-delay"><td colspan="2"></td></tr>
+</table>
+
+
+
+
+
+{if $fields.useradresses eq 1}
+{if $addresses|@count > 1 && $log}
+	<div id="AllAdresses{$type}" class="system_DisplayNone onesteporder-contact-adresses">
+
+		<div class="onesteporder-block-title">{"onesteporder_your_adress"|translate}:
+		<a href='javascript:void(0);' onclick="SelectUserAdresses('{$type}');" class="onesteporder-contact-adresses-remove"><span></span></a>
+		</div>
+		<table cellspacing="0" cellpadding="0" class="onesteporder-contact-adresses-table">
+		<tr class="onesteporder-contact-adresses-tr-delay"><td colspan="2"></td></tr>
+		{section name=a loop=$addresses}
+			<tr class="onesteporder-contact-adresses-tr{if $smarty.section.a.last}-last{/if}">
+				<td class="onesteporder-contact-adresses-td1">
+					{$addresses[a].last_name} {$addresses[a].first_name}<br>
+					{$addresses[a].address}<br>
+					{if $addresses[a][6]} {$addresses[a][6]}{else} {$addresses[a].state}{/if}
+					{$addresses[a].city} {$addresses[a].country} {$addresses[a].zip}
+				</td>
+				<td class="onesteporder-contact-adresses-td2">
+				<input type="button" onclick="UpdateUserAdress(
+				this, '{$addresses[a].first_name}', '{$addresses[a].last_name}', '{$addresses[a].countryID}','{$addresses[a].zoneID}','{$addresses[a].zip}','{$addresses[a][6]}','{$addresses[a].city}','{$addresses[a].address}','{$type}','{$addresses[a].addressID}');" value="{"onesteporder_select_your_adress"|translate}" class="system_ChangeAdressButtons onesteporder-contact-button {if $POST.addressID ne '' && $POST.addressID eq $addresses[a].addressID}disabled{elseif $address.addressID ne '' && $address.addressID eq $addresses[a].addressID}onesteporder-contact-button-disabled{/if}" {if $POST.addressID ne '' && $POST.addressID eq $addresses[a].addressID}disabled{elseif $address.addressID ne '' && $address.addressID eq $addresses[a].addressID}disabled{/if} />
+				</td>
+			</tr>
+		{/section}
+		<tr class="onesteporder-contact-adresses-tr-delay"><td colspan="2"></td></tr>
+		</table>
+	</div>
+{/if}
+{/if}

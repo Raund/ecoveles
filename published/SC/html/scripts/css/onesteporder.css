@@ -1,0 +1,1045 @@
+.system_DisplayNone{ display:none; }
+.RecalculateCartIcons{
+	padding:0px;
+	margin: 0px;
+}
+
+body, table, td, span, a, b, input, select{}
+
+.onesteporder-fl_left{ float:left; }
+.onesteporder-fl_right{ float:right; }
+.onesteporder-center{text-align:center; padding-bottom:40px;}
+.onesteporder-width1000{ min-width:700px; margin: 0 auto; text-align:left;  }
+.onesteporder-center-IFrame{text-align:center;}
+.onesteporder-width1000-IFrame{
+	width: 930px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 25px 10px;
+}
+.onesteporder-width350-IFrame{ 
+	width:350px;
+	margin: 0 auto; 
+	text-align:left; 
+	padding:25px 25px 0px 25px;
+}
+
+.radio{display:none;}
+.custom_radio, .custom_radio_active{
+	background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;	
+	display:inline-block;
+	width: 11px;
+	height: 16px;
+	padding-right: 5px;
+	cursor: pointer;
+	border:0px!important;
+}
+.custom_radio{background-position: -9px -124px;}
+.custom_radio:hover{background-position: -30px -124px;}
+.custom_radio_active{background-position: -51px -124px;}
+.custom_radio_active:hover{background-position: -72px -124px;}
+.custom_radio_disabled{background-position: -93px -124px!important; cursor:default;}
+.custom_radio_active_disabled{background-position: -114px -124px!important; cursor:default;}
+
+
+.checkbox{display:none;}
+.custom_checkbox, .custom_checkbox_active{
+	background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;	
+	display:inline-block;
+	width: 11px;
+	height: 16px;
+	padding-right: 5px;
+	cursor: pointer;
+	border:0px!important;
+}
+.custom_checkbox{background-position: -9px -101px;}
+.custom_checkbox:hover{background-position: -30px -101px;}
+.custom_checkbox_active{background-position: -51px -101px;}
+.custom_checkbox_active:hover{background-position: -72px -101px;}
+
+
+
+
+.onesteporder-informer{
+	margin: 0px;
+    width:324px;
+    height:99px;
+	text-align: center;
+    background: url("/kdm/cart/img2.png") 0 0 no-repeat;
+}
+	.onesteporder-informer-text{
+		padding: 0px 0px 15px;
+		font-family: "Verdana";
+		font-size: 12px;
+		color: #222;
+		line-height: 17px;
+	}
+	.onesteporder-informer a{
+  	    position:absolute;
+        margin: 50px 0 0 100px;
+        display: block;
+        background-color: #339933;
+        border-bottom:3px solid #006600;
+        width:120px;
+        height:40px;
+        color:#FFFFFF;
+        text-align: center;
+        font: bold 14px/19px Arial;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        text-shadow: 1px 0px 0px #006600;
+        -webkit-box-shadow: 0px 2px 2px 1px #999999;
+        -moz-box-shadow: 0px 2px 2px 1px #999999;
+        box-shadow: 0px 2px 2px 1px #999999;
+	}
+    .onesteporder-informer a#oforml{
+        margin-left:225px;
+        background-color: #FF6600;
+        border-bottom:3px solid #993300;
+        text-shadow: 1px 0px 0px #993300;
+
+    }
+
+		.onesteporder-informer a:hover{
+			text-decoration:none;
+		}
+
+		
+		
+.onesteporder-block-title{
+	font-family:"Calibri";
+	font-size:17px;
+	color:#000000;
+	display:inline-block;
+	
+	padding: 20px 30px 20px 20px;
+	height:22px;
+	line-height:22px;
+	background: #f5f5f5 url('../images/onesteporder/onesteporder-block-title.png') right top no-repeat;
+}
+.onesteporder-block-title-nobg{
+	font-family:"Calibri";
+	font-size:17px;
+	color:#000000;
+	display:inline-block;
+	padding: 20px;
+	height:22px;
+	line-height:22px;
+}
+
+	.onesteporder-remove-all-elements{ 	float:right; margin: 24px 0px 0px 0px;}
+	.onesteporder-remove-all-elements a{
+		font-family:"Verdana";
+		font-size: 11px!important;
+		color:#4EAE24;
+		text-decoration:underline;
+		line-height: 17px;
+		margin-right:35px;
+		font-weight:normal;
+	}
+		.onesteporder-remove-all-elements a:hover{ text-decoration:none; }
+		.onesteporder-remove-all-elements a span{
+			background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;	
+			border: 0px;
+			font-size: 0px;
+			width: 18px;
+			height: 20px;
+			background-position: -9px -9px;
+			cursor: pointer;
+			margin: 2px 0px 0px 7px;
+			display:inline-block;
+			vertical-align:middle;
+		}
+			.onesteporder-remove-all-elements a span.hover{ background-position: -30px -9px; }
+			.onesteporder-remove-all-elements a span.active{ background-position: -51px -9px; }
+			.onesteporder-remove-all-elements a span.disabled{ background-position: -72px -9px; }
+
+	
+	
+.onesteporder-products-table{
+	background: #f5f5f5;
+	width:100%;
+	border-collapse: collapse;
+}
+	.onesteporder-products-tr{ border-bottom: 1px solid white; }
+	.onesteporder-products-tr td, .onesteporder-products-tr-prelast td{ line-height:38px; }
+	
+	.onesteporder-products-tr-first{ border-bottom: 0px; }
+	.onesteporder-products-tr-last{ border-bottom: 0px; }
+	.onesteporder-products-tr-first td{ padding: 10px 0px 0px 0px; border-top: 1px solid #F7F7F7;}
+	.onesteporder-products-tr-first .onesteporder-products-price{ border-bottom:0px; border-top: 1px solid #F7F7F7;}
+	.onesteporder-products-tr-prelast .onesteporder-products-price{ border-bottom:0px;}
+	.onesteporder-products-tr-last td{ padding: 0px 0px 10px 0px;}
+	
+		.onesteporder-products-image{
+			padding: 5px 10px 5px 15px;
+			width: 50px;
+			line-height:0px;
+			font-size:0px;
+			vertical-align:middle;
+		}
+		.onesteporder-products-image img{ 
+			width:75px;
+			line-height:0px;
+			font-size:0px;
+		}
+		.onesteporder-products-name{ padding:10px 0px 10px 10px; line-height: 21px!important; vertical-align:middle;}
+		.onesteporder-products-name a{
+			font-family:"Verdana";
+			font-size: 11px!important;
+			color:#4EAE24;
+			text-decoration:underline;
+			line-height:17px;
+			font-weight:normal;
+		}
+		.onesteporder-products-name a:hover{
+			text-decoration:none
+		}
+		.onesteporder-products-name i{
+			font-family:"Verdana";
+			font-size: 11px!important;
+			color:#656565;
+		}
+		.onesteporder-products-count{
+			width: 170px;
+			text-align: center;
+			vertical-align:middle;
+		}
+		.onesteporder-products-price{
+			background: white;
+			border-bottom: 1px solid #F7F7F7;
+			text-align: center;
+			width: 175px;
+			font-family: "Calibri";
+			color: #696969;
+			font-size: 14px!important;
+			vertical-align:middle;
+		}
+		.onesteporder-products-delete{
+			width: 88px;
+			text-align: center;
+			vertical-align:middle;
+		}
+
+			.onesteporder-products-count-icon-p{
+				background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;
+				border: 0px;
+				font-size: 0px;
+				width: 18px;
+				height: 20px;
+				background-position: -9px -55px;	
+				cursor: pointer;
+				position: relative;
+			}
+				.onesteporder-products-count-icon-p-hover{ background-position: -30px -55px; }
+				.onesteporder-products-count-icon-p-active{ background-position: -51px -55px; }
+				.onesteporder-products-count-icon-p-disabled{ background-position: -72px -55px; cursor:default; }
+				
+			.onesteporder-products-count-icon-m{
+				background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;	
+				border: 0px;
+				font-size: 0px;
+				width: 18px;
+				height: 20px;
+				background-position: -9px -78px;
+				cursor: pointer;
+				position: relative;
+			}
+				.onesteporder-products-count-icon-m-hover{ background-position: -30px -78px; }
+				.onesteporder-products-count-icon-m-active{ background-position: -51px -78px; }
+				.onesteporder-products-count-icon-m-disabled{ background-position: -72px -78px; cursor:default;}
+
+			.onesteporder-products-count-input{
+				background: url('../images/onesteporder/onesteporder-inputs.png') left top repeat-x;
+				width: 48px;
+				height: 29px;
+				border: 0px;
+				background-position: 0px -542px;
+				border-left: 1px solid #EFEFEF;
+				border-right: 1px solid #EFEFEF;
+				text-align: center;
+				line-height: 29px;
+				font-family: "Calibri";
+				font-size: 14px;
+				color: #656565;
+				position: relative;
+				top: -1px;
+			}
+
+			a.onesteporder-products-remove{ text-decoration:none }
+			a.onesteporder-products-remove span{
+				background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;	
+				border: 0px;
+				font-size: 0px;
+				width: 18px;
+				height: 20px;
+				background-position: -9px -32px;
+				cursor: pointer;
+				position: relative;
+				top: 2px;
+				display:inline-block;
+			}
+				a.onesteporder-products-remove span.hover{ background-position: -30px -32px; }
+				a.onesteporder-products-remove span.active{ background-position: -51px -32px; }
+				a.onesteporder-products-remove span.disabled{ background-position: -72px -32px; }
+
+	
+.onesteporder-products-pre-total-div{
+	height: 182px;
+	margin-bottom: 30px;
+}	
+	.onesteporder-products-pre-total-table{
+		width: 540px;
+		border-collapse: collapse;
+		margin-top: 36px;
+		float:right;
+	}				
+		.onesteporder-products-pre-total-table td{
+			background: url('../images/onesteporder/onesteporder-products-pre-total-table.png') left top;	
+			border-top: 6px solid white;
+		}	
+			.onesteporder-products-pre-total-tr-discount{
+				height:34px;
+				line-height:34px;
+			}
+			.onesteporder-products-pre-total-tr-total{
+				height:60px;
+				line-height:60px;	
+			}
+
+	.onesteporder-products-pre-total-tr-discount .onesteporder-products-pre-total-td1{
+		font-family:"Verdana";
+		font-size: 11px!important;
+		color:#656565;
+		padding-left:40px;
+		width:240px;
+	}
+		.onesteporder-products-pre-total-tr-discount .onesteporder-products-pre-total-td1 div{
+			font-family:"Verdana";
+			font-size: 11px!important;
+			color:#656565;
+		}
+			.onesteporder-products-pre-total-tr-discount .onesteporder-products-pre-total-td1 a{
+				font-family: "Verdana";
+				font-size: 11px!important;
+				color: #4EAE24;
+				text-decoration: none;
+				border-bottom:1px dashed  #4EAE24;
+				font-weight:normal;
+			}
+			.onesteporder-products-pre-total-tr-discount .onesteporder-products-pre-total-td1 a:hover{
+				padding-top:1px;
+				border-bottom:0px;
+			}
+	.onesteporder-products-pre-total-tr-discount .onesteporder-products-pre-total-td2{
+		font-family:"Calibri";
+		font-size:14px;
+		color:#656565;
+		text-align:center;
+	}
+	.onesteporder-products-pre-total-tr-discount .onesteporder-products-pre-total-td3{width: 90px;}
+
+
+	.onesteporder-products-pre-total-tr-total .onesteporder-products-pre-total-td1{
+		font-family:"Calibri";
+		font-size:17px;
+		color:#2f2f2f;
+		padding-left:40px;
+		width:240px;
+	}
+	.onesteporder-products-pre-total-tr-total .onesteporder-products-pre-total-td2{
+		font-family:"Calibri";
+		font-size:18px;
+		color:#2f2f2f;
+		text-align:center;
+	}
+	.onesteporder-products-pre-total-tr-total .onesteporder-products-pre-total-td3{width: 90px;}
+
+
+.onesteporder-order-types{
+	background: url('../images/onesteporder/onesteporder-inputs.png') left top repeat-x;
+	height: 39px;
+	background-position: 0px -373px;
+}	
+	.onesteporder-order-types ul{
+		list-style: none;
+		height: 39px;
+		border-left: 1px solid #D1D1D1;
+		padding:0px;
+		margin:0px;
+	}	
+		.onesteporder-order-types li{ float: left; }	
+			.onesteporder-order-types li a.system_TabOrderingType{
+				font-family: "Calibri";
+				font-size: 14px;
+				color: #5F5F5F;
+				text-decoration: none;
+				text-shadow: 0px 1px 0px white;
+
+				font-weight:normal;
+				display: block;
+				text-align: center;
+				line-height: 39px;
+				border-right: 1px solid #D1D1D1;
+			}	
+			.onesteporder-order-types li a.system_TabOrderingType:hover{
+				background: url('../images/onesteporder/onesteporder-inputs.png') left top repeat-x;
+				background-position: 0px -414px;
+			}	
+			.onesteporder-order-types li a.system_TabOrderingTypeCurrent, .onesteporder-order-types li a.system_TabOrderingTypeCurrent:hover{
+				background: url('../images/onesteporder/onesteporder-inputs.png') left top repeat-x;
+				background-position: 0px -456px;
+				color:#ffffff;
+				text-shadow:none;
+			}	
+	
+	.onesteporder-order-types-information-div{}
+	.onesteporder-order-types-information{
+		background:#f5f5f5;
+		margin-bottom: 55px;
+	}	
+	.onesteporder-order-types-information0{ width:207px; }
+	.onesteporder-order-types-information-padding{
+		padding: 20px 10px;
+		font-family: "Verdana";
+		font-size: 11px!important;
+		color: dimGray;
+		line-height: 17px;
+	}
+	.onesteporder-order-types-information1, .onesteporder-order-types-information2, .onesteporder-order-types-information3{
+		display:inline-block;
+		vertical-align: top;
+	}
+		.onesteporder-order-types-information1 span{
+			background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;
+			width: 38px;
+			height: 35px;
+			background-position: -99px -9px;
+			display: block;
+			position: absolute;
+			margin: 0px 0px 0px 2px;
+		}
+		.onesteporder-order-types-information2 span{
+			background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;
+			width: 35px;
+			height: 34px;
+			background-position: -147px -9px;
+			display: block;
+			position: absolute;
+			margin: 0px 0px 0px 9px;
+		}
+		.onesteporder-order-types-information3 span{
+			background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;
+			width: 20px;
+			height: 36px;
+			background-position: -192px -9px;
+			display: block;
+			position: absolute;
+			margin: 0px 0px 0px 15px;
+		}
+		.onesteporder-order-types-information1 span.current{background-position: -99px -58px;}
+		.onesteporder-order-types-information2 span.current{background-position: -147px -58px;}
+		.onesteporder-order-types-information3 span.current{background-position: -192px -58px;}
+
+	.onesteporder-order-desc{
+		font-family: "Verdana";
+		font-size: 11px!important;
+		color: dimGray;
+		line-height: 17px;
+		padding: 0px 0px 0px 60px;
+	}	
+		
+	.onesteporder-order-types-information-array-tr{ background:#FFFFFF;	}
+	.onesteporder-order-types-information-array, .onesteporder-order-types-information-array-visible{
+		height: 17px;		
+		display:inline-block;
+	}	
+	.onesteporder-order-types-information-array-visible{ background: url('../images/onesteporder/onesteporder-order-types-information-current.png') center bottom no-repeat; }	
+
+	
+	
+	
+.onesteporder-contact-div{
+	display:inline-block;
+	margin-right:2%;
+	vertical-align:top;
+	width:48%;
+}	
+.onesteporder-delivery-n-payment-div{
+	vertical-align:top;
+	display:inline-block;
+	width:49%;
+}
+.onesteporder-fast-div{
+	vertical-align:top;
+	display:inline-block;
+	width:49%;
+}		
+
+
+			
+			
+.onesteporder-contact-yandex{
+	text-align: right;
+	vertical-align: middle;
+	float: center;
+	margin-left: 245px;
+	position: relative;
+	margin-top: -26px;
+	top: 37px;
+}	
+	.onesteporder-contact-yandex a{
+		font-family:"Verdana";
+		font-size: 11px!important;
+		color:#656565;
+		text-decoration:underline;
+		font-weight:normal;
+	}	
+	.onesteporder-contact-yandex a:hover{ text-decoration:none }
+		.onesteporder-contact-yandex-lable{color:#000000;}
+		.onesteporder-contact-yandex-lable span{color:#ff000a;}
+
+.onesteporder-contact-table{
+	background: #f5f5f5;
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+	.onesteporder-contact-tr-delay td{ height: 20px; }
+	.onesteporder-contact-tr-first{}
+	.onesteporder-contact-tr-last{}
+	.onesteporder-contact-td-last{
+		text-align:right;
+		padding:0px 40px;
+		line-height:36px;
+		font-family:"Verdana";
+		font-size: 11px!important;
+		color:#696969;
+		vertical-align: top;
+	}
+	.onesteporder-contact-td-last a{
+		text-decoration:none;
+		border-bottom:1px dashed #4EAE24;
+		color:#4EAE24;
+		font-weight:normal;
+	}
+	.onesteporder-contact-td-last a:hover{
+		padding-top:1px;
+		border-bottom:0px;
+	}
+	.onesteporder-contact-tr-first td{
+		padding:0px 40px;
+		line-height:17px;
+		font-family:"Verdana";
+		font-size: 11px!important;
+		color:#a6a6a6;
+		vertical-align: top;
+	}
+	.onesteporder-contact-tr-first td a{
+		font-family:"Verdana";
+		font-size: 11px!important;
+		color:#4EAE24;
+		text-decoration:none;
+		border-bottom:1px dashed #4EAE24;
+		font-weight:normal;
+	}
+		
+	.onesteporder-contact-tr{ border-bottom: 1px solid white; }
+	
+	
+	
+	.BillingAdress{}
+	.onesteporder-contact-tr-billing{
+		border-bottom: 0px;
+		border-top: 1px solid #F8F8F8;
+		background: #EEE;
+	}	
+	
+	
+	
+		.onesteporder-contact-td1{			
+			width:150px;
+			padding:10px 0px 10px 40px;
+			line-height:17px;
+			font-family:"Verdana";
+			font-size:11px!important;
+			color:#656565;
+			vertical-align: top;
+		}
+		.onesteporder-contact-td1 span, .onesteporder-contact-td-last span{ color:#ff000a }
+		.onesteporder-contact-td2{
+			width:240px;
+			font-family:"Verdana";
+			font-size: 11px!important;
+			color:#656565;
+			padding:5px 40px 5px 20px;
+		}
+
+		.onesteporder-contact-button{
+			background: url('../images/onesteporder/onesteporder-inputs.png') left top repeat-x;
+			background-position: 0px -247px;
+			height: 27px;
+			line-height: 28px;
+			font-family: "Calibri";
+			font-size: 14px;
+			color: white;
+			padding: 0px 17px;
+			border: 0px;
+			text-shadow: 0px -1px 0px #1C9F04;
+			cursor:pointer;
+		}
+		.onesteporder-contact-button-hover{ background-position: 0px -277px; }
+		.onesteporder-contact-button-active{ background-position: 0px -307px;}
+		.onesteporder-contact-button-disabled{ background-position: 0px -339px; color: #BDBDBD; text-shadow:none; cursor:default;}
+		
+		.onesteporder-contact-input{
+			background: #ffffff;
+			width: 100%;
+			background-position: 0px -509px;
+			height: 28px;
+			border: 1px solid #D9D9D9;
+			line-height: 28px;
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+		}
+		.onesteporder-code-img{
+			vertical-align:middle;
+		}
+		.onesteporder-code-input{
+			vertical-align: middle;
+			width: 100px;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+		}
+		.onesteporder-contact-textarea{
+			background: #ffffff;
+			width: 100%;
+			background-position: 0px -509px;
+			height: 84px;
+			border: 1px solid #D9D9D9;
+			line-height: 25px;
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+			resize: none;
+		}
+		.onesteporder-contact-select{
+			width: 100%;
+			height: 28px;
+			border: 1px solid #D9D9D9;
+			line-height: 28px;
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+		}
+		.onesteporder-contact-tr-first label, .onesteporder-contact-td2 label{cursor: pointer;}
+		.onesteporder-contact-tr-first .custom_checkbox{
+			margin: 10px 14px 0px 0px;
+			float: left;
+		}
+		.onesteporder-contact-td2 .custom_checkbox{ float: left; margin: 3px 10px 0px 0px; }
+		.onesteporder-contact-td2 label{	line-height:21px; }
+
+
+
+#ShippingMethods, #BillingMethods{  }
+#BillingMethods{ margin-top: 40px; }
+
+.onesteporder-shipping-n-payment-table{ background:#f5f5f5; width:100%;}
+	.onesteporder-shipping-n-payment-tr{}
+		.onesteporder-shipping-n-payment-td, .onesteporder-shipping-n-payment-td-last{ padding:20px  40px; }
+		.onesteporder-shipping-n-payment-td label, .onesteporder-shipping-n-payment-td-last label{cursor: pointer;}
+		.onesteporder-shipping-n-payment-td{ border-bottom: 1px dashed#CECCCC; }
+		.onesteporder-shipping-n-payment-td-last{}
+		
+			.onesteporder-shipping-n-payment-radio{
+				vertical-align: middle;
+				display:inline-block;
+			}
+			.onesteporder-shipping-n-payment-logo{
+				vertical-align: middle;
+				display:inline-block;
+				margin-left: 15px;
+			}
+			.onesteporder-shipping-n-payment-name{
+				vertical-align: middle;
+				display:inline-block;				
+				font-family:"Calibri";
+				font-size:14px;
+				color:#2f2f2f;
+				font-weight: bold;
+				margin-left: 15px;
+			}
+			.onesteporder-shipping-n-payment-rate{ 
+				vertical-align: middle;
+				float: right; 
+				font-family:"Calibri";
+				font-size:14px;
+				color:#4EAE24;
+			}
+			.onesteporder-shipping-n-payment-desc{
+				font-family:"Verdana";
+				font-size: 11px!important;
+				color:#696969;	
+				line-height:17px;
+				padding: 15px 0px;
+			}
+			.onesteporder-shipping-n-payment-rate2{}
+			.onesteporder-shipping-n-payment-rate2-text{
+				font-family:"Verdana";
+				font-size: 11px!important;
+				color:#A6A6A6;	
+				line-height: 28px;
+			}
+			.onesteporder-shipping-n-payment-rate2 select{
+				float:right;
+				width: 245px;
+				height: 28px;
+				border: 1px solid #D9D9D9;
+				line-height: 28px;
+				font-family: "Verdana";
+				font-size: 11px!important;
+				color: #656565;
+				padding: 0px 0px 0px 5px;	
+			}
+			
+	.onesteporder-products-total-div{
+		text-align: center;
+		height: 60px;
+		padding: 40px 0px 0px;
+	}			
+	.onesteporder-products-total{
+		background: url('../images/onesteporder/onesteporder-products-pre-total-table.png') left top;
+		height: 60px;
+		float: left;
+		width: 48%;
+	}				
+		.onesteporder-products-total-div1{
+			font-family: "Calibri";
+			font-size: 14px;
+			color: #2F2F2F;
+			padding-left: 6%;
+			width: 50%;
+			float: left;
+			vertical-align: middle;
+			line-height: 60px;
+		}							
+		.onesteporder-products-total-div2{
+			font-family: "Calibri";
+			font-size: 18px;
+			color: #4EAE24;
+			text-align: center;
+			line-height: 60px;
+			width: 35%;
+			vertical-align: middle;
+			float: right;
+		}			
+		.onesteporder-products-total-submit, .onesteporder-products-total-submit-fast{
+			background: url('../images/onesteporder/onesteporder-inputs.png') left top repeat-x;
+			width: 96%;
+			height: 60px;
+			border: 0px;
+			background-position: 0px 0px;
+			text-align: center;
+			line-height: 60px;
+			font-family: "Calibri";
+			font-size: 27px;
+			color: white;
+			text-shadow: 0px -1px 0px #00688A;
+			cursor:pointer;
+		}		
+		.onesteporder-noframe-ordering-button {
+			background: url('../images/onesteporder/onesteporder-inputs.png') left top repeat-x;
+			width: 377px;
+			height: 60px;
+			border: 0px;
+			background-position: 0px 0px;
+			text-align: center;
+			line-height: 60px;
+			font-family: "Calibri";
+			font-size: 27px;
+			color: white;
+			text-shadow: 0px -1px 0px #00688A;
+			cursor: pointer;
+			margin: 122px 0px 0px 0px;
+		}	
+		.onesteporder-products-total-submit{ margin: 0px; width: 47%; }	
+		.onesteporder-products-total-submit-hover{ background-position: 0px -61px; }
+		.onesteporder-products-total-submit-active{ background-position: 0px -122px; }
+		.onesteporder-products-total-submit-disabled{ background-position: 0px -185px; color: #c7c6c6; text-shadow:none; cursor:default;}
+		
+
+	.onesteporder-products-total-div-fast{ text-align:center;}			
+		.onesteporder-products-total-fast{
+			background: url('../images/onesteporder/onesteporder-products-pre-total-table.png') left top;
+			height:60px;
+			margin: 0px 0px 30px 0px;
+		}				
+		.onesteporder-products-total-div1-fast{
+			font-family: "Calibri";
+			font-size: 14px;
+			color: #2F2F2F;
+			padding-left: 10%;
+			width: 60%;
+			line-height:60px;
+			display:inline-block;
+			float: left;
+			text-align: left;
+		}							
+		.onesteporder-products-total-div2-fast{
+			font-family: "Calibri";
+			font-size: 18px;
+			color: #4EAE24;
+			text-align: center;
+			line-height:60px;
+			float: right;
+			width: 30%;
+			vertical-align:middle;
+		}	
+		.onesteporder-products-total-fast-footer-delay{ height:60px;}		
+		
+	
+	.onesteporder-loading{
+		background: url('../images/onesteporder/onesteporder-loading.gif') center 25px no-repeat;
+		height: 81px;
+		font-family: "Calibri";
+		font-size: 27px;
+		color: #4EAE24;
+		text-align: center;
+		padding: 70px 0px 0px 0px;
+	}	
+
+	.onesteporder-coupon-field{
+		position: absolute;
+		background: white;
+		border: 1px solid #E7E5E5;
+		padding: 10px 15px;
+		margin: 0px 0px 0px -33px;
+		display:none;
+	}
+		.onesteporder-coupon-field-input{
+			background: #F6F6F6;
+			width: 75px;
+			background-position: 0px -509px;
+			height: 25px;
+			border: 1px solid #D9D9D9;
+			line-height: 28px;
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+			padding: 0px 10px;
+			text-align:center;
+		}
+
+/* ========== ADRESSES ========== */
+
+	.onesteporder-contact-adresses{}
+	.onesteporder-contact-adresses-table{
+		background: whiteSmoke;
+		width: 490px;
+		border-collapse: collapse;
+		margin-bottom:30px;
+	}
+		.onesteporder-contact-adresses-tr{ border-bottom: 1px solid white; }
+		.onesteporder-contact-adresses-tr-last{}
+		.onesteporder-contact-adresses-td1{
+			width: 219px;
+			padding: 10px 0px 10px 40px;
+			line-height: 17px;
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+			vertical-align: top;
+		}
+		.onesteporder-contact-adresses-td2{
+			padding:0px 30px;
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+			line-height: 36px;
+		}	
+		.onesteporder-contact-adresses-tr-delay td{ height: 20px; }
+		a.onesteporder-contact-adresses-remove{ text-decoration:none }
+		a.onesteporder-contact-adresses-remove span{
+			background: url('../images/onesteporder/onesteporder-icons.png') left top no-repeat;	
+			border: 0px;
+			font-size: 0px;
+			width: 18px;
+			height: 20px;
+			background-position: -9px -32px;
+			cursor: pointer;
+			position: relative;
+			top: 7px;
+			left:7px;
+			display:inline-block;
+		}
+
+		
+/* ========== MESSAGE ERROR ========== */
+	
+	.message_empty{
+		padding: 15px;
+		font-family: Calibri;
+		font-size: 16px;
+		font-weight: normal;
+		color:#2F2F2F;
+		text-align:center;
+	}	
+		.message_empty a{
+			font-family:"Verdana";
+			font-size: 11px!important;
+			color:#4EAE24;
+			text-decoration:underline;
+			line-height: 17px;
+			font-weight:normal;
+		}		
+		.message_empty a:hover{ text-decoration:none; }
+		
+	.error_flag{display:none;}	
+	.error_block{
+		background:#de4343 url('../images/onesteporder/onesteporder-error-message.png') 0px 0px;
+		border: 1px solid #c43d3d;
+		margin: 40px;
+		color: #ffffff;
+		text-shadow: 0 1px 0 rgba(0,0,0,.5);
+		text-align: center;
+	}
+		.error_message{
+			display: block;
+			padding: 15px;
+			font-family: Calibri;
+			font-size: 16px;
+			font-weight: normal;
+		}
+
+/* ========== CONFIGURATION ========== */
+
+	.onesteporder-configuration-name-current{
+		background: #FDFCEA;
+		padding: 7px;
+		border: 1px dashed #D1CF97;
+		margin: -8px;
+		display:inline-block;
+	}
+
+	.onesteporder-configuration-item-url{ margin: 5px 0px 0px 0px; height:17px; }
+		.onesteporder-configuration-item-url a{
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+			text-decoration: none;
+			border-bottom: 1px dashed;
+		}
+		.onesteporder-configuration-item-url a:hover{ border-bottom: 0px dashed; }
+			
+	.onesteporder-configuration-item-div{
+		position: absolute;
+		background: #F1F1F1;
+		padding: 15px;
+		margin: -13px 0px 0px 0px;
+		display: none;
+		-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.28), 0px 6px 26px rgba(0, 0, 0, 0.28);
+		-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.28), 0px 6px 26px rgba(0, 0, 0, 0.28);
+		-o-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.28), 0px 6px 26px rgba(0, 0, 0, 0.28);
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.28), 0px 6px 26px rgba(0, 0, 0, 0.28);
+		text-align: center;
+		border: 1px solid white;
+	}
+		.onesteporder-configuration-item-div td{
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+			padding: 0px 5px;
+		}
+		.onesteporder-configuration-item-div select{
+			width: 100%;
+			height: 28px;
+			border: 1px solid #D9D9D9;
+			line-height: 28px;
+			font-family: "Verdana";
+			font-size: 11px!important;
+			color: #656565;
+		}	
+		.configuration-item-submit{
+			margin: 10px 0px 0px 0px;
+			padding: 0px;
+			width: 70%;
+		}	
+		.onesteporder-configuration-item-hide {
+			float: right;
+			width: 25%;
+			margin: 14px 0px 0px 0px;
+		}
+			.onesteporder-configuration-item-hide a{
+				font-family: "Verdana";
+				font-size: 11px!important;
+				color: #656565;
+				text-decoration: none;
+				border-bottom: 1px dashed;
+				position: relative;
+				clear: both;
+				text-align: right;
+			}
+			.onesteporder-configuration-item-hide a:hover{ border-bottom: 0px dashed; }
+				
+
+select, .onesteporder-shipping-n-payment-rate2 select{
+	padding:5px 0px;
+}
+			
+
+			
+			
+	.onesteporder-portable .onesteporder-contact-div{
+		display: block;
+		margin-right: 0px;
+		width: auto;
+	}	
+	.onesteporder-portable .onesteporder-delivery-n-payment-div{
+		display: block;
+		width: auto;
+	}
+	.onesteporder-portable .onesteporder-fast-div{
+		display: block;
+		width: auto;
+		text-align: center;
+	}		
+		.onesteporder-portable .onesteporder-products-total-div-fast{
+			text-align: center;
+			width: 70%;
+			display: inline-block;
+		}
+			.onesteporder-portable .onesteporder-products-total-div1-fast, .onesteporder-portable .onesteporder-products-total-div1{
+				font-size:17px;
+			}
+			.onesteporder-portable .onesteporder-products-total-submit-fast{
+				width:70%;
+			}
+	.onesteporder-portable .onesteporder-order-types-leftside{
+		display:none;
+	}
+	.onesteporder-portable .onesteporder-order-types-information {
+		margin-top: 12px;
+	}
+	.onesteporder-portable .onesteporder-products-total-div{
+		height:auto;
+	}
+	.onesteporder-portable .onesteporder-products-total{
+		width: 75%;
+		display: inline-block;
+		float: none;
+		margin-bottom: 30px;
+	}
+	.onesteporder-portable .onesteporder-products-total-div1{
+		padding-left: 0%;
+		width: 60%;
+	}
+	.onesteporder-portable .onesteporder-products-price, .onesteporder-portable .onesteporder-products-count{
+		width: 130px;
+	}
+	
+	
+	

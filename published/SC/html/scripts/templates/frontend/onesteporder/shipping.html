@@ -1,0 +1,87 @@
+<div class="onesteporder-block-title">Способы доставки:</div>
+
+{if $count_shipping_methods>0 }
+	{if $shipping_methods}
+
+		{literal}
+		<script>
+			RadioStyle('shipping');
+		</script>
+		{/literal}
+	
+		{assign var="countShipping" value=0}
+		<table cellspacing="0" cellpadding="0" border="0" class="onesteporder-shipping-n-payment-table">
+			{section name=i loop=$shipping_methods}
+			{if $shipping_costs[i] ne "n/a"}
+			{assign var="countShipping" value=$countShipping+1}
+			{count item=_CostsNum array=$shipping_costs[i]}
+			<tr class="onesteporder-shipping-n-payment-tr">
+				<td class="onesteporder-shipping-n-payment-td{if $smarty.section.i.last}-last{/if}">
+						
+					<div class="onesteporder-shipping-n-payment-rate" id="ShippingCostSpan{$shipping_methods[i].SID}">
+					{if $_CostsNum<2}
+						{if $shipping_costs[i][0].name}{$shipping_costs[i][0].name}{if $shipping_costs[i][0].rate} - {/if}{/if}
+						{if $shipping_costs[i][0].rate}<span id="shippingCost{$shipping_methods[i].SID}" xRate="{$shipping_costs[i][0].rateWithOutUnit}">{$shipping_costs[i][0].rateWithUnit}</span>{/if}
+					{/if}
+					</div>
+				
+					<div class="onesteporder-shipping-n-payment-radio">
+						<input name="shippingMethodID" value="{$shipping_methods[i].SID}" id="shipping-method-{$shipping_methods[i].SID}"  type="radio" onclick="BillingMethods();" {if $POST.shippingMethodID == $shipping_methods[i].SID}checked{/if} />
+						<label for="shipping-method-{$shipping_methods[i].SID}"></label>
+					</div>
+					
+					{if $shipping_methods[i].logo}	
+					<div class="onesteporder-shipping-n-payment-logo">
+						<label for="shipping-method-{$shipping_methods[i].SID}">
+							<img src="{$shipping_methods[i].logo|escape:'html'}" alt="{$shipping_methods[i].Name|escape:'html'}" title="{$shipping_methods[i].Name|escape:'html'}" />
+						</label>
+					</div>
+					{/if}
+					
+					<div class="onesteporder-shipping-n-payment-name">
+						<label for="shipping-method-{$shipping_methods[i].SID}">{$shipping_methods[i].Name}</label>
+					</div>
+				
+					{if $shipping_methods[i].description}
+					<div class="onesteporder-shipping-n-payment-desc">
+						{$shipping_methods[i].description}
+					</div>
+					{/if}
+					
+					
+					<div class="onesteporder-shipping-n-payment-rate2" id="ShippingCostSelect{$shipping_methods[i].SID}" >
+					{if $_CostsNum>1}
+						<div class="ShippingCostTD">
+						<select name="shippingServiceID[{$shipping_methods[i].SID}]" id="shippingServiceID{$shipping_methods[i].SID}" onchange="UpdateTotalPrice();">
+							{assign var="_SID" value=$shipping_methods[i].SID }
+							{foreach from=$shipping_costs[i] item=_Rate}
+								<option value="{$_Rate.id}" {if $POST.shippingServiceID[$_SID] eq $_Rate.id}selected{/if} xRate="{$_Rate.rateWithOutUnit}">{$_Rate.name} - {$_Rate.rateWithUnit}</option>
+							{/foreach}
+						</select>
+						</div>
+						<div class="onesteporder-shipping-n-payment-rate2-text">Варианты доставки:</div>
+					{/if}
+					</div>
+					
+				<td>
+			</tr>
+			{/if}
+			{/section}
+			{if $countShipping eq 0}
+			<tr class="onesteporder-shipping-n-payment-tr">
+				<td class="onesteporder-shipping-n-payment-td-last">
+					<div class="message_empty">{"checkout_no_shipping_methods"|translate}</div>
+				</td>
+			</tr>
+			{/if}
+		</table>
+	{else}
+		<table cellspacing="0" cellpadding="0" border="0" class="onesteporder-shipping-n-payment-table">
+		<tr class="onesteporder-shipping-n-payment-tr">
+			<td class="onesteporder-shipping-n-payment-td-last">
+				<div class="message_empty">{"checkout_no_shipping_methods"|translate}</div>
+			</td>
+		</tr>
+		</table>
+	{/if}
+{/if}

@@ -1,0 +1,13 @@
+Скрипт кнопки обратного звонка для WebAsyst Shop-Script
+
+UPD: 18/01/2013
+Добавлена каптча.
+
+Скопируйте папку из данного архива в корень WebAsyst Shop-Script.
+Поместите код кнопки в ваш шаблон: 
+
+<a href="javascript:openFadeIFrame('/callback/index.php'); resizeFadeIFrame(270, 300);"><img style="margin-bottom: 10px;" height="30" border="0" width="200" title="Обратный звонок" alt="Обратный звонок" src="/callback/call.png"></a>
+
+Пользуйтесь!
+
+http://web-developer.name/post/604
