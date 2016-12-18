@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2016-09-08 20:49:56
+<?php /* Smarty version 2.6.26, created on 2016-12-18 21:00:59
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'component', 'index.html', 10, false),array('modifier', 'set_query', 'index.html', 55, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'component', 'index.html', 10, false),array('modifier', 'set_query', 'index.html', 56, false),)), $this); ?>
 <div id="m-header" class="mobile">
     <a href="/" class="logo">EcoVeles</a>
     <a href="#" class="show_menu">Меню</a>
@@ -11,10 +11,12 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'component',
         <tr>
             <td class="menu1 topmenu" colspan="3">
                 <div class="frst">
-                    <div class="left"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '14:15:17:16:18:5:3','view' => 'horizontal','overridestyle' => ':qsve9u'), $this);?>
+                    <div class="left"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '1:14:15:17:16:18:5:3','view' => 'horizontal','overridestyle' => ':qsve9u'), $this);?>
 <!-- cpt_container_end --></div>
                     <div class="right lang"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'language_selection','view' => 'flags','overridestyle' => ':9fryqp'), $this);?>
 <!-- cpt_container_end --></div>
+                    <div class="right auth"><a href="/register/"><?php echo 'Реєстрація'; ?>
+</a></div>
                     <div class="right auth"><a href="/index.php?ukey=auth"><?php echo 'Вхід'; ?>
 </a></div>
                     <div class="clear"></div>

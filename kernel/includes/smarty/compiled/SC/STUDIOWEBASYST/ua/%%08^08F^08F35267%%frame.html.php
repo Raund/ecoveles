@@ -1,10 +1,10 @@
-<?php /* Smarty version 2.6.26, created on 2016-09-08 20:49:56
+<?php /* Smarty version 2.6.26, created on 2016-12-18 21:00:59
          compiled from frame.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'set_query_html', 'frame.html', 32, false),)), $this); ?>
 <?php if ($this->_tpl_vars['PAGE_VIEW'] == 'noframe' && ( $this->_tpl_vars['CurrentDivision']['ukey'] == 'cart' || $this->_tpl_vars['CurrentDivision']['ukey'] == 'checkout' )): ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <?php endif; ?><html dir="<?php if ($this->_tpl_vars['lang_direction']): ?>rtl<?php else: ?>ltr<?php endif; ?>">
-<head>
+<head>  <meta name="yandex-verification" content="859e735bcfd367e2" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="<?php echo @CONF_FULL_SHOP_URL; ?>
 ">

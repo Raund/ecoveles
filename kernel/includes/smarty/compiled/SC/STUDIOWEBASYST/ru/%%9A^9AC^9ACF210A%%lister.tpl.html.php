@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-09-08 20:52:06
+<?php /* Smarty version 2.6.26, created on 2016-12-18 21:01:26
          compiled from backend/lister.tpl.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'set_query_html', 'backend/lister.tpl.html', 3, false),array('modifier', 'escape', 'backend/lister.tpl.html', 16, false),)), $this); ?>

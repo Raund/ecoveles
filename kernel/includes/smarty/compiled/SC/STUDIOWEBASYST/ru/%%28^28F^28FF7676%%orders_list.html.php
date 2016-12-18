@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2016-09-08 20:52:06
-         compiled from /home/ecoveles/ecoveles.com.ua/www/published/SC/html/scripts/templates/backend/orders_list.html */ ?>
+<?php /* Smarty version 2.6.26, created on 2016-12-18 21:01:26
+         compiled from D:/OpenServer/domains/ecoveles.loc/published/SC/html/scripts/templates/backend/orders_list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', '/home/ecoveles/ecoveles.com.ua/www/published/SC/html/scripts/templates/backend/orders_list.html', 29, false),array('modifier', 'set_query_html', '/home/ecoveles/ecoveles.com.ua/www/published/SC/html/scripts/templates/backend/orders_list.html', 69, false),array('modifier', 'default', '/home/ecoveles/ecoveles.com.ua/www/published/SC/html/scripts/templates/backend/orders_list.html', 76, false),array('function', 'cycle', '/home/ecoveles/ecoveles.com.ua/www/published/SC/html/scripts/templates/backend/orders_list.html', 72, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'D:/OpenServer/domains/ecoveles.loc/published/SC/html/scripts/templates/backend/orders_list.html', 29, false),array('modifier', 'set_query_html', 'D:/OpenServer/domains/ecoveles.loc/published/SC/html/scripts/templates/backend/orders_list.html', 69, false),array('modifier', 'default', 'D:/OpenServer/domains/ecoveles.loc/published/SC/html/scripts/templates/backend/orders_list.html', 76, false),array('function', 'cycle', 'D:/OpenServer/domains/ecoveles.loc/published/SC/html/scripts/templates/backend/orders_list.html', 72, false),)), $this); ?>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td valign="top"><h1><?php echo 'Список заказов'; ?>

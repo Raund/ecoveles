@@ -567,7 +567,7 @@ SHOPPING CART
  text-align: left;
 }
 #cart_page_title h1{
- display inline;
+ display: inline;
  padding: 0px;
  margin: 0px;
 }
@@ -623,7 +623,7 @@ HOMEPAGE UNFOLDED TREE
 .rcat_child_categories a
 { line-height:150%;
   font-weight: normal;
-  font-size:90 %;
+  font-size:90%;
   color:#0085B0;
 }
 .rcat_child_categories a:hover { text-decoration:underline;}

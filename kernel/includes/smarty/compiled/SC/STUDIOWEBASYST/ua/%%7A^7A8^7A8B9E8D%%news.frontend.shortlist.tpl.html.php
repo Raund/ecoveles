@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-09-08 20:49:56
+<?php /* Smarty version 2.6.26, created on 2016-12-18 21:01:00
          compiled from news.frontend.shortlist.tpl.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'set_query_html', 'news.frontend.shortlist.tpl.html', 2, false),array('modifier', 'cat', 'news.frontend.shortlist.tpl.html', 5, false),array('modifier', 'set_query', 'news.frontend.shortlist.tpl.html', 9, false),array('modifier', 'escape', 'news.frontend.shortlist.tpl.html', 21, false),array('modifier', 'default', 'news.frontend.shortlist.tpl.html', 21, false),)), $this); ?>
