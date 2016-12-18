@@ -278,7 +278,8 @@ table#main tr td.menu2 div.frst{
 
 table#header{
   width:870px;
-  height:87px;
+  height:70px;
+  padding-top: 15px;
 }
 table#header tr td.callback{
 /*  width: 155px; */
@@ -288,9 +289,11 @@ table#header tr td.phones{
 }
 
 table#header tr td.callback div.frst{
+  text-align: center;
   background: url(../../images/eco_header_callback.png) left center no-repeat;
   height:40px;
   padding-left:40px;
+  /*
   -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -298,15 +301,16 @@ table#header tr td.callback div.frst{
     -webkit-box-shadow: 0px 2px 2px 1px #999999;
     -moz-box-shadow: 0px 2px 2px 1px #999999;
     box-shadow: 0px 2px 2px 1px #999999;
+  */
   margin: 10px 0 0 15px;
   width:80px;
 }
 table#header tr td.callback div.frst a{
   display:block;
-  font: bold 10px/11px Verdana;
+  font: 13px/14px Verdana;
   color: #000000;
-  padding:6px 0 0 5px;
-  width: 50px;
+  padding:3px 0 0 5px;
+  width: 58px;
   background: transparent;
 }
 table#header tr td.phones div.frst{
@@ -320,7 +324,7 @@ table#header tr td.phones div.frst div{
   background: url(../../images/eco_header_phone.png) left 9px no-repeat;
   padding-top: 5px;
   float:left;
-  margin-right:28px;
+  margin-right:25px;
   letter-spacing: 0px;
 }
 table#header tr td.phones div.frst div.txthdr{
@@ -335,9 +339,11 @@ table#header tr td.phones div.frst div.txthdr{
   font: normal 14px/20px Arial;
 }
 table#header tr td.cart div.frst{
+  text-align: center;
   background: url(../../images/eco_header_cart.png) left 0px no-repeat;
   height:40px;
   padding-left:40px;
+  /*
   -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -345,6 +351,7 @@ table#header tr td.cart div.frst{
     -webkit-box-shadow: 0px 2px 2px 1px #999999;
     -moz-box-shadow: 0px 2px 2px 1px #999999;
     box-shadow: 0px 2px 2px 1px #999999;
+  */
   margin-top: 10px;
 }
 table#header tr td.cart div.frst div.box{
@@ -408,11 +415,11 @@ ul.vertical, ul.horizontal {
     }
 
 .cpt_divisions_navigation a, .xtra .cpt_auxpages_navigation a{
-    color: white;
+    color: #000;
 	text-decoration: none;
     font-family: OpenSans,Tahoma,Verdana;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: normal;
 }
 .cpt_auxpages_navigation a {
 	color: white;
@@ -453,12 +460,15 @@ ul.vertical, ul.horizontal {
 	padding-left:0px;
 }
 .cpt_divisions_navigation a:hover, .xtra .cpt_auxpages_navigation a:hover {
-    color:#FFFF99
+    text-decoration: underline;
+    color: #000000;
 }
 
+/*
 .cpt_divisions_navigation li, .xtra .cpt_auxpages_navigation li{
 	background:url(../../images/eco_mainmenu_sep.png) left center no-repeat;
-}
+
+}*/
 .cpt_auxpages_navigation li {
 	padding-left: 15px;
 	background:url(../../images/raund_white.png) left center no-repeat;
@@ -483,14 +493,17 @@ td.xtra ul.horizontal li{
 	padding: 0 0 0px 0;
 }
 .cpt_shopping_cart_info a {
-	color: 000;
-	font-size:10px;
+	color: #ffb300;
+	font-size:13px;
 	text-decoration:none;
+    font-weight: bold;
+    /*
 	border-bottom:solid 1px;
+    */
 	line-height:18px;
 }
 .cpt_shopping_cart_info a:hover {
-	border:none;
+    text-decoration: underline;
 }
 .cpt_survey {
 	background:#466935;
@@ -644,12 +657,12 @@ a .bullet {
 .cpt_product_search {
 	font-size:50%;
 	padding:0px 8px 0 0 ;
-	height:70px;
+	height:40px;
     line-height:24px;
     margin-left:10px;
 }
 .cpt_product_search #searchstring{
-  width: 360px;
+  width: 200px;
   font-size: 12px;
   line-height:12px;
 }
@@ -1397,4 +1410,22 @@ div.prdbrief_name a{
         right: 6%;
     }
 }
-
+/*raund css*/
+.wrap-search{
+    padding-top: 20px;
+}
+table#header tr td.phones div.frst.wrap-phone{
+    height: 40px;
+}
+#shpcrtgc{
+    font-weight: normal;
+    font-size: 13px;
+}
+.our-services{
+    color: #339933;
+    text-align: center;
+}
+table#header tr td.callback div.frst a:hover{
+    text-decoration: underline;
+}
+/*end raund css*/

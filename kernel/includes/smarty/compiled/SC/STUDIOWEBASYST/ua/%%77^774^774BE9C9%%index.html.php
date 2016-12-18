@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-12-18 21:00:59
+<?php /* Smarty version 2.6.26, created on 2016-12-19 01:28:23
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'component', 'index.html', 10, false),array('modifier', 'set_query', 'index.html', 56, false),)), $this); ?>
@@ -28,29 +28,29 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'component',
 <!-- cpt_container_end --></div></td>
             <td colspan="2">
                  <table cellpadding="0" cellspacing="0" border="0" id="header">
-                 <tr>
-                      <td class="phones" colspan="2"><div class="frst"><div>(066)931-15-15</div><div>(096)361-15-15</div><div>(063)734-15-15</div>
-                      <div class="txthdr clear"><?php echo 'Працюємо 7 днів на тиждень'; ?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo 'Доставка по Києву та Україні'; ?>
+                 <tr class="first-row">
+                      <td class="phones" colspan="3"><div class="frst wrap-phone"><div>(066)931-15-15</div><div>(096)361-15-15</div><div>(063)734-15-15</div></div></td>
+                     <td class="menu1 xtra" rowspan="2">
+                        <div class="frst1">
+                            <div class="our-services"><?php echo 'Наші послуги'; ?>
 </div>
-                      </div></td>
-                      <td class="cart" width="140px"><div class="frst"><div class="box"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'shopping_cart_info','overridestyle' => ':bflnp0'), $this);?>
-<!-- cpt_container_end --></div></div></td>
-                      <td class="callback" width="160px"><div class="frst"><a href="javascript:openFadeIFrame('/callback/index.php'); resizeFadeIFrame(270, 300);"><?php echo 'Замовити дзвінок'; ?>
-</a></div></td>
-
+                           <div class="left"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '6:9:20','view' => 'vertical','overridestyle' => ':t5apqg'), $this);?>
+<!-- cpt_container_end --></div>
+                           <div class="right"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '21:7:8','view' => 'vertical','overridestyle' => ':t5apqg'), $this);?>
+<!-- cpt_container_end --></div>
+                           <div class="clear"></div>
+                        </div>
+                      </td>
                  </tr>
                  <tr>
-                      <td width="445px"><div class="frst"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'product_search','overridestyle' => ':mxuni3'), $this);?>
-<!-- cpt_container_end --></div></td>
-                      <td class="menu1 xtra" colspan="3" height="53px">
-                          <div class="frst">
-                              <div class="left"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '6:7:8','view' => 'horizontal','overridestyle' => ':t5apqg'), $this);?>
+                      <td class="wrap-search">
+                          <div class="frst"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'product_search','overridestyle' => ':mxuni3'), $this);?>
 <!-- cpt_container_end --></div>
-                              <div class="right"></div>
-                              <div class="clear"></div>
-                          </div>
                       </td>
+                     <td class="cart"><div class="frst"><div class="box"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'shopping_cart_info','overridestyle' => ':bflnp0'), $this);?>
+<!-- cpt_container_end --></div></div></td>
+                     <td class="callback"><div class="frst"><a href="javascript:openFadeIFrame('/callback/index.php'); resizeFadeIFrame(270, 300);"><?php echo 'Замовити дзвінок'; ?>
+</a></div></td>
                  </tr>
                  </table>
             </td>
