@@ -35,6 +35,8 @@ class Product extends DBObject {
 	var $add2cart_counter;
 	var $vkontakte_update_timestamp;
 	var $id_1c;
+	var $latin_name;
+	var $arrive_text;
 	//var $id_quickbooks;
 	
 	var $__primary_key = 'productID';

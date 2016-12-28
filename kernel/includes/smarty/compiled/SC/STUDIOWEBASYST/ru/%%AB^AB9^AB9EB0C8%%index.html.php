@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-12-19 01:27:50
+<?php /* Smarty version 2.6.26, created on 2016-12-20 14:07:45
          compiled from backend/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'translate', 'backend/index.html', 10, false),)), $this); ?>

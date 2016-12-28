@@ -3,7 +3,37 @@
 
 	{if $product_related_number > 0}
 		<h2>{"str_related_items"|translate}</h2>
+<table align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<ul class="product_list">
+				{section name=i loop=$product_related}
+				<li style="width: {$smarty.const.CONF_PRDPICT_THUMBNAIL_SIZE+20}; height: auto;">
+					{if $product_related[i].pictures.default.thumbnail}
+					<table class="popular-table" cellpadding="0" cellspacing="0" style="width: {$smarty.const.CONF_PRDPICT_THUMBNAIL_SIZE+20}; height: {$smarty.const.CONF_PRDPICT_THUMBNAIL_SIZE};">
+						<tr>
+							<td valign="bottom" align="center">
+								<a href='{"?productID=`$product_related[i].productID`&product_slug=`$product_related[i].slug`"|set_query_html}'>
+									<img class="imgMy" border="0" src="{$smarty.const.URL_PRODUCTS_PICTURES}/{$product_related[i].pictures.default.thumbnail|escape:'url'}" />
+								</a>
+							</td>
+						</tr>
+					</table>
+					{/if}
+					<div class="boxshadow">
+						<a href='{"?productID=`$product_related[i].productID`&product_slug=`$product_related[i].slug`"|set_query_html}'>
+							{$product_related[i][1]}
+						</a>
+						<div class="totalPrice">{$product_related[i][2]}</div>
+					</div>
+				</li>
+				{/section}
+			</ul>
+		</td>
+	</tr>
+</table>
 		
+<!--
 		<table {if $PAGE_VIEW eq 'mobile'}align="center"{/if}>
 		{section name=i loop=$product_related}
 		<tr>
@@ -41,6 +71,7 @@
 		</tr>
 		{/section}
 		</table>
+-->
 	{/if}
 	{/if}
 {else}

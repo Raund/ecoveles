@@ -3,10 +3,8 @@ html, body{
   padding: auto;
     width:100%;*/
     width: 100%;
-    height: 100%;
     overflow: auto;
     margin: auto;
-    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
@@ -288,22 +286,14 @@ table#header tr td.phones{
   width: 250px;
 }
 
-table#header tr td.callback div.frst{
-  text-align: center;
-  background: url(../../images/eco_header_callback.png) left center no-repeat;
-  height:40px;
-  padding-left:40px;
-  /*
-  -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    text-shadow: 1px 0px 0px #FFFFFF;
-    -webkit-box-shadow: 0px 2px 2px 1px #999999;
-    -moz-box-shadow: 0px 2px 2px 1px #999999;
-    box-shadow: 0px 2px 2px 1px #999999;
-  */
-  margin: 10px 0 0 15px;
-  width:80px;
+table#header tr td.callback div.frst {
+    text-align: center;
+    background: url(../../images/eco_header_callback.png) 8px center no-repeat;
+    height: 40px;
+    padding-left: 40px;
+    margin: 10px 0 0 15px;
+    width: 80px;
+    background-size: 32px;
 }
 table#header tr td.callback div.frst a{
   display:block;
@@ -324,8 +314,11 @@ table#header tr td.phones div.frst div{
   background: url(../../images/eco_header_phone.png) left 9px no-repeat;
   padding-top: 5px;
   float:left;
-  margin-right:25px;
+  margin-right: 8%;
   letter-spacing: 0px;
+}
+table#header tr td.phones div.frst div:nth-child(3){
+  margin-right: 0;
 }
 table#header tr td.phones div.frst div.txthdr{
   height:22px;
@@ -376,6 +369,8 @@ table#header tr td.cart div.frst div.box{
   background: none repeat scroll 0 0 #F8F8F8;
   border-bottom: 3px solid #EEEEEE;
   border-top: 3px solid #EEEEEE;
+  margin-top: 0;
+  position: relative;
 }
 
 ul.vertical, ul.horizontal {
@@ -415,16 +410,16 @@ ul.vertical, ul.horizontal {
     }
 
 .cpt_divisions_navigation a, .xtra .cpt_auxpages_navigation a{
-    color: #000;
+    color: #5d5c5c;
 	text-decoration: none;
     font-family: OpenSans,Tahoma,Verdana;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: normal;
 }
 .cpt_auxpages_navigation a {
 	color: white;
 	text-decoration: none;
-
+    font-size: 12px;
 }
 .cpt_auxpages_navigation a:hover{
     color: #FFFF99;
@@ -1090,7 +1085,7 @@ div.prdbrief_name a{
         width: auto !important;
     }
     table#header tr td.phones div.frst > div{
-        font-size: 11px;
+        font-size: 14px;
         padding-left: 18px;
         margin-right: 21px;
         background-size: 15px;
@@ -1104,6 +1099,7 @@ div.prdbrief_name a{
     }
 }
 @media screen and (max-width:850px) {
+    /*
     table#header tr td.phones div.frst > div{
         font-size: 10px;
         padding-left: 13px;
@@ -1114,6 +1110,7 @@ div.prdbrief_name a{
         height: 18px;
         margin-top: 5px;
     }
+    */
     .cpt_maincontent td,
     .cpt_news_short_list,
     .cpt_category_tree li a {
@@ -1127,6 +1124,9 @@ div.prdbrief_name a{
 @media screen and (max-width:830px) {
     #logo{
         display: none;
+    }
+    table#header tr td.phones div.frst.wrap-phone {
+        padding-left: 4%;
     }
     .l_column > *{
         display: none;
@@ -1190,7 +1190,7 @@ div.prdbrief_name a{
         left: 0px;
     }
     table#header .phones div.frst{
-        width: 100%;
+        width: 96%;
         position: absolute;
         top: 58px;
         left: 0px;
@@ -1269,7 +1269,9 @@ div.prdbrief_name a{
     #prddeatailed_container .add2cart_handler,
     #prddeatailed_container .cpt_product_add2cart_button input[type=image] {
         width: 150px;
+        /*
         margin: 0 auto;
+        */
     }
     td#prddeatailed_container .cpt_product_price span.totalPrice{
         clear: both;
@@ -1415,7 +1417,7 @@ div.prdbrief_name a{
     padding-top: 20px;
 }
 table#header tr td.phones div.frst.wrap-phone{
-    height: 40px;
+    height: 34px;
 }
 #shpcrtgc{
     font-weight: normal;
@@ -1424,8 +1426,146 @@ table#header tr td.phones div.frst.wrap-phone{
 .our-services{
     color: #339933;
     text-align: center;
+    margin-top: 5px;
+}
+.popular-title {
+    color: #339933;
+    text-align: center;
+    font-size: 19px;
+    position: absolute;
+    top: -35px;
+    width: 100%;
+    letter-spacing: 1.3px;
 }
 table#header tr td.callback div.frst a:hover{
     text-decoration: underline;
+}
+.cpt_product_price{
+    width: 230px;
+    float: left;
+    position: relative;
+}
+.cpt_product_add2cart_button {
+    padding-top: 44px;
+    float: left;
+}
+.cpt_product_add2cart_button input{
+    display: inline-block;
+}
+.cpt_product_add2cart_button input.product_qty{
+    width: 20px;
+}
+.add2cart_handler, .cpt_product_add2cart_button input[type=image] {
+    display: inline-block;
+    margin: 0 0 -17px 0;
+}
+td#prddeatailed_container .cpt_product_price span.totalPrice{
+    margin: 0 0 0 40px;
+}
+.code-wrap{
+    padding-bottom: 20px;
+}
+.price-text{
+    float: left;
+    padding-top: 18px;
+    font-size: 16px;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table; }
+
+.clearfix:after {
+    clear: both;
+}
+.latin-name-wrap{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 100%;
+}
+.arrive-text {
+    position: absolute;
+    top: 44px;
+    right: -190px;
+    padding: 10px;
+    color: #FFFFFF;
+    font: bold 15px/20px Verdana;
+    text-shadow: 1px 0px 0px #004200;
+    letter-spacing: -1px;
+    text-align: center;
+    display: block;
+    background: linear-gradient(to top, #a5801a, #c8cc56);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px rgba(158, 120, 36, 0.3);
+}
+@media screen and (max-width: 1100px) and (min-width: 680px) {
+    .services-part-one,
+    .services-part-two {
+        float: none;
+    }
+    .services-part-two {
+        margin-top: -10px;;
+    }
+    table#header tr td.phones div.frst div{
+        margin-right: 3%;
+    }
+}
+@media screen and (max-width: 1060px) {
+    .code-wrap {
+        padding-bottom: 40px;
+    }
+    .latin-name-wrap {
+        top: 25px;
+        left: 0;
+    }
+    .cpt_product_add2cart_button {
+        padding-top: 0px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .cpt_auxpages_navigation a,
+    .auth a{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 680px) {
+    td.menu1{
+        width: 100%;
+    }
+    td.menu1 > .frst1{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .cpt_product_price {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .cpt_product_price {
+        width: 100%;
+    }
+    .code-wrap {
+        text-align: center;
+    }
+    .code-wrap.latin-name-wrap{
+        padding-bottom: 20px;
+    }
+    #img-current_picture{
+        margin-bottom: 20px;
+    }
+    td#prddeatailed_container .cpt_product_price span.totalPrice {
+        margin: 0;
+    }
+    .price-text {
+        display: none;
+    }
+    .cpt_product_name{
+        text-align: center;
+    }
+    .cpt_product_add2cart_button {
+        float: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 /*end raund css*/

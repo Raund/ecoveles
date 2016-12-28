@@ -60,11 +60,25 @@ ul#product-pictures-container li table td.img_container{ldelim}
 			{html_text name="name" values=$product table=$smarty.const.PRODUCTS_TABLE style="width:100%"}
 		</td>
 	</tr>
-	
+
+	<tr>
+		<td width="1%" nowrap><strong>Поступит: </strong></td>
+		<td>
+			{html_text name="arrive_text" values=$product table=$smarty.const.PRODUCTS_TABLE style="width:100%"}
+		</td>
+	</tr>
+
 	<tr>
 		<td nowrap>{lbl_str_price}: </td>
 		<td>
 			<input name="Price" value="{$product.Price|escape:'html'}" size="6" type="text" style="text-align:right;" /> {$default_currency.currency_iso_3}
+		</td>
+	</tr>
+
+	<tr>
+		<td nowrap>{"lbl_str_latin_name"|translate}: </td>
+		<td>
+			<input name="latin_name" value="{$product.latin_name|escape:'html'}" size="50" type="text" style="text-align:left;" />
 		</td>
 	</tr>
 

@@ -69,7 +69,7 @@
 
 			$this->ml_tables = array(
 				PRODUCTS_TABLE => array(
-					'name', 'brief_description', 'description','meta_title', 'meta_description', 'meta_keywords'
+					'name', 'arrive_text', 'brief_description', 'description','meta_title', 'meta_description', 'meta_keywords'
 				),
 				PRODUCT_OPTIONS_TABLE => array(
 					'name', 'description_title', 'description_text', 'slider_prefix'

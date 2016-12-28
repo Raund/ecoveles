@@ -1,11 +1,26 @@
 {if !$CPT_CONSTRUCTOR_MODE}
-	{if $currencies_count ne 0 && $product_info.Price > 0}
+
+	{* product code (SKU) *}
+	{if $product_info.product_code && $smarty.const.CONF_ENABLE_PRODUCT_SKU}
+	<div class="code-wrap">
+		<span class="productCodeLabel">{"prdset_product_code"|translate}:&nbsp;</span>
+		<span class="productCode"><i>{$product_info.product_code|escape:'html'}</i></span>
+	</div>
+	{/if}
+{if $product_info.latin_name ne ''}
+	<div class="code-wrap latin-name-wrap">
+		<span class="productCodeLabel">{"latin_name"|translate}:</span>
+		<span class="productCode"><i>{$product_info.latin_name|escape:'html'}</i></span>
+	</div>
+{/if}
+
+{if $currencies_count ne 0 && $product_info.Price > 0}
 		{* show list price? *}
 		{if $product_info.list_price > 0 && $product_info.list_price > $product_info.Price && $product_info.Price > 0} 
 		<span class="regularPrice">{$product_info.list_priceWithUnit}</span> 
 		{/if}
-	
-		<span class="totalPrice">{$product_info.PriceWithUnit}</span>
+
+		<div><span class="price-text">{"str_price"|translate}</span><span class="totalPrice">{$product_info.PriceWithUnit}</span></div>
 	
 		{* you save *}
 		{if $product_info.list_price > 0 && $product_info.list_price > $product_info.Price && $product_info.Price > 0} 
@@ -15,15 +30,11 @@
 		</div>
 		{/if}
 	{/if}
-	
-	{* product code (SKU) *}
-	{if $product_info.product_code && $smarty.const.CONF_ENABLE_PRODUCT_SKU}
-	<div>
-		<span class="productCodeLabel">{"prdset_product_code"|translate}:&nbsp;</span>
-		<span class="productCode"><i>{$product_info.product_code|escape:'html'}</i></span>
-	</div>
+
+	{if $product_info.ordering_available == 0 && $product_info.arrive_text ne ''}
+			<div class="arrive-text">{$product_info.arrive_text|escape:'html'}</div>
 	{/if}
-	
+
 	{* in stock info *}
 	{if $smarty.const.CONF_CHECKSTOCK == '1'}
 		{if $product_info.in_stock > 0}

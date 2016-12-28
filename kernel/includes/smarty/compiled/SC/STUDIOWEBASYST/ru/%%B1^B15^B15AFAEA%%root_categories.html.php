@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-12-19 01:28:24
+<?php /* Smarty version 2.6.26, created on 2016-12-20 14:08:25
          compiled from root_categories.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'set_query_html', 'root_categories.html', 4, false),array('modifier', 'escape', 'root_categories.html', 8, false),array('modifier', 'default', 'root_categories.html', 20, false),)), $this); ?>

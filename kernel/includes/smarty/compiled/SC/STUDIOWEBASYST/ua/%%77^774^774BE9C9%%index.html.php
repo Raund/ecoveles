@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-12-19 01:28:23
+<?php /* Smarty version 2.6.26, created on 2016-12-20 17:40:01
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'component', 'index.html', 10, false),array('modifier', 'set_query', 'index.html', 56, false),)), $this); ?>
@@ -34,7 +34,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'component',
                         <div class="frst1">
                             <div class="our-services"><?php echo 'Наші послуги'; ?>
 </div>
-                           <div class="left"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '6:9:20','view' => 'vertical','overridestyle' => ':t5apqg'), $this);?>
+                           <div class="left"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '6:22:20','view' => 'vertical','overridestyle' => ':t5apqg'), $this);?>
 <!-- cpt_container_end --></div>
                            <div class="right"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '21:7:8','view' => 'vertical','overridestyle' => ':t5apqg'), $this);?>
 <!-- cpt_container_end --></div>
