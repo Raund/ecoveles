@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-12-20 14:08:24
+<?php /* Smarty version 2.6.26, created on 2017-02-06 16:55:47
          compiled from head.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'head.html', 1, false),array('modifier', 'escape', 'head.html', 1, false),)), $this); ?>
@@ -10,7 +10,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '
 <link rel="shortcut icon" href="/published/publicdata/STUDIOWEBASYST/attachments/SC/images/favicon.ico">
 <script type="text/javascript" src="<?php echo @URL_JS; ?>
 /niftycube.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="/kdm/slider/js/jquery.js"></script>
 <link href="/kdm/slider/css/default.css" rel="stylesheet" type="text/css" />
 <script src="/kdm/slider/js/mobilyslider.js" type="text/javascript"></script>
 <script src="/kdm/slider/js/init.js" type="text/javascript"></script>
