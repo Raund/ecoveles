@@ -17,7 +17,7 @@
 {if $currencies_count ne 0 && $product_info.Price > 0}
 		{* show list price? *}
 		{if $product_info.list_price > 0 && $product_info.list_price > $product_info.Price && $product_info.Price > 0} 
-		<span class="regularPrice">{$product_info.list_priceWithUnit}</span> 
+		<span class="regularPrice r-regularPrice">{$product_info.list_priceWithUnit}</span> 
 		{/if}
 
 		<div><span class="price-text">{"str_price"|translate}</span><span class="totalPrice">{$product_info.PriceWithUnit}</span></div>

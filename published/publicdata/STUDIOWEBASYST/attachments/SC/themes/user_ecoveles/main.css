@@ -1023,6 +1023,19 @@ del.r-old-price{
     font-size: 12px;
     letter-spacing: 1.1;
 }
+.product_i_2 .r-sale{
+    padding: 15px 15px 20px 25px;
+    border-radius: 0 0 0 65px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1;
+}
+.r-regularPrice{
+    font-size: 14px;
+    color: grey;
+    text-decoration: line-through;
+    font-weight: bold;
+}
 /* END raund fix */
 @media screen and (max-width:1155px) {
     #page{
