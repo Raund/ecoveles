@@ -26,7 +26,10 @@
 	<div class="prdbrief_thumbnail">
 	<table cellpadding="0" cellspacing="0">
 		<tr>
-			<td align="center" valign="middle" style="width: {$smarty.const.CONF_PRDPICT_THUMBNAIL_SIZE}px; height: {$smarty.const.CONF_PRDPICT_THUMBNAIL_SIZE}px;">
+			<td align="center" valign="middle" style="position:relative; width: {$smarty.const.CONF_PRDPICT_THUMBNAIL_SIZE}px; height: {$smarty.const.CONF_PRDPICT_THUMBNAIL_SIZE}px;">
+				{if $product_info.list_price > 0}
+					<div class="r-sale">Акция</div>
+				{/if}
 				<!-- Thumbnail -->
 				<a {$target} href='{$_product_url}'>
 {if $product_info.thumbnail}
@@ -36,10 +39,13 @@
 {/if}
 				</a>
 			</td>
-            <td align="center" valign="top">
-                	{if $currencies_count ne 0 && $product_info.Price > 0}
+            <td align="center" valign="top" style="position:relative;">
+					{if $currencies_count ne 0 && $product_info.Price > 0}
+					{if $product_info.list_price > 0}
+						<del class="r-old-price">{$product_info.list_priceWithUnit}</del>
+					{/if}
                 	<div class="prdbrief_price">
-                		<span class="totalPriceMy">{$product_info.PriceWithUnit}</span>
+						<span class="totalPriceMy">{$product_info.PriceWithUnit}</span>
                 	</div>
                 	{/if}
 
