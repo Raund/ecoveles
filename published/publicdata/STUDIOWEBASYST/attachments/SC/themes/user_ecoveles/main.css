@@ -994,7 +994,17 @@ div.prdbrief_name a{
   font: bold 14px/18px Verdana;
   color: #5F3926;   
 }
-
+/* raund fix */
+.services-part-two .cpt_auxpages_navigation li:last-child > a{
+    background-color: #ffb300;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: -4px;
+    font-size: 12px;
+    letter-spacing: 1.2;
+}
+/* END raund fix */
 @media screen and (max-width:1155px) {
     #page{
         width: 100%;
