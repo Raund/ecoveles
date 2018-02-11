@@ -14,7 +14,7 @@
 	<input class="product_price" value="{$product_info.PriceWithOutUnit|escape:'html'}" type="hidden">
 	{assign var=_cnt value=''}
 
-	<div class="prdbrief_name" style="height:39px">
+	<div class="prdbrief_name" style="height:auto; padding-bottom: 7px;">
 		<a {$target} href='{$_product_url}'>{$product_info.name|escape:'html'}</a>
 		{* product code (SKU) *}
 {if $product_info.product_code && $smarty.const.CONF_ENABLE_PRODUCT_SKU}
