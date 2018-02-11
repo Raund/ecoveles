@@ -19,7 +19,7 @@
 		<a name="anch_current_picture"></a>
 		<div class="product_i_2" style="position:relative; width: {$smarty.const.CONF_PRDPICT_STANDARD_SIZE}px;">
 			{if $product_info.list_price > 0}
-				<div class="r-sale">Акция</div>
+				<div class="r-sale">{"my_sale"|translate}</div>
 			{/if}
 		{if !$printable_version&&$product_info.big_picture && ($product_info.big_picture!=$product_info.picture)}
 			<a target="_blank" onclick="return hs.expand(this)" href='{$smarty.const.URL_PRODUCTS_PICTURES}/{if $product_info.big_picture}{$product_info.big_picture|escape:'url'}{else}{$product_info.picture|escape:'url'}{/if}' img_width="{$product_info.picture_width}" img_height="{$product_info.picture_height}">
