@@ -1,0 +1,3841 @@
+2013-10-09T18:32:03+04:0000001	8E3	DEBUG	1.90Mb	1.91Mb	
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-log/wa-installer',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000002	8E3	DEBUG	1.90Mb	1.91Mb	
+waInstaller::protect
+{------------------------------------------------------------
+array (
+  'path' => 'wa-log/wa-installer',
+  'htaccess' => 'wa-log/.htaccess',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000003	8E3	DEBUG	1.90Mb	1.91Mb	
+waInstaller::formatUpdateList tree
+{------------------------------------------------------------
+array (
+  'targets' => 
+  array (
+    0 => 'wa-apps/contacts/',
+    1 => 'wa-apps/installer/',
+    2 => 'wa-apps/site/',
+    3 => 'wa-apps/stickies/',
+    4 => 'wa-content/',
+    5 => 'wa-system/',
+  ),
+  'update_list' => 
+  array (
+    0 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/contacts.tar.gz',
+      'target' => 'wa-apps/contacts/',
+      'slug' => 'wa-apps/contacts',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/contacts/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+    ),
+    1 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/installer.tar.gz',
+      'target' => 'wa-apps/installer/',
+      'slug' => 'wa-apps/installer',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/installer/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+    ),
+    2 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/site.tar.gz',
+      'target' => 'wa-apps/site/',
+      'slug' => 'wa-apps/site',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/site/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+    ),
+    3 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/stickies.tar.gz',
+      'target' => 'wa-apps/stickies/',
+      'slug' => 'wa-apps/stickies',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/stickies/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+    ),
+    4 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-content.tar.gz',
+      'target' => 'wa-content/',
+      'slug' => 'wa-content',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-content/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+    ),
+    5 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-system.tar.gz',
+      'target' => 'wa-system/',
+      'slug' => 'wa-system',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-system/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000004	8E3	DEBUG	1.90Mb	1.92Mb	
+callback
+{------------------------------------------------------------
+array (
+  0 => 
+  array (
+    'file' => '/wa-installer/lib/classes/wainstaller.class.php:154',
+    'function' => 'waInstaller->envSet()',
+  ),
+  1 => 
+  array (
+    'file' => '/wa-installer/install.php:384',
+    'function' => 'waInstaller->update(Array(6))',
+  ),
+  2 => 
+  array (
+    'file' => '/index.php:11',
+    'function' => 'require_once',
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000005	8E3	TRACE	1.94Mb	1.95Mb	
+Register ob error handler
+{------------------------------------------------------------
+true
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000006	8E3	TRACE	1.95Mb	1.96Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => false,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.4926,
+  'stage_start_time' => 1381329123.4926,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000007	8E3	DEBUG	1.95Mb	1.97Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/8E3/update/wa-content/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000008	8E3	DEBUG	1.95Mb	1.97Mb	prepare_heartbeat
+waInstaller::protect
+{------------------------------------------------------------
+array (
+  'path' => 'wa-data/protected/wa-installer/8E3/update/wa-content/',
+  'htaccess' => 'wa-data/protected/.htaccess',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000009	8E3	TRACE	1.95Mb	1.97Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.049124002456665,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5417,
+  'stage_start_time' => 1381329123.4926,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000010	8E3	TRACE	1.95Mb	1.98Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0019230842590332,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5435,
+  'stage_start_time' => 1381329123.5435,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000011	8E3	DEBUG	1.96Mb	1.98Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/8E3/update/wa-system/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000012	8E3	TRACE	1.96Mb	1.98Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0025229454040527,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5461,
+  'stage_start_time' => 1381329123.5435,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000013	8E3	TRACE	1.96Mb	1.99Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0025050640106201,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5485,
+  'stage_start_time' => 1381329123.5485,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000014	8E3	DEBUG	1.96Mb	1.99Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/stickies/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000015	8E3	TRACE	1.96Mb	1.99Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0036740303039551,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5522,
+  'stage_start_time' => 1381329123.5485,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000016	8E3	TRACE	1.96Mb	2.00Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0022091865539551,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5543,
+  'stage_start_time' => 1381329123.5543,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000017	8E3	DEBUG	1.96Mb	2.00Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/site/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000018	8E3	TRACE	1.96Mb	2.00Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0028839111328125,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5572,
+  'stage_start_time' => 1381329123.5543,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000019	8E3	TRACE	1.96Mb	2.01Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0025179386138916,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5597,
+  'stage_start_time' => 1381329123.5597,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000020	8E3	DEBUG	1.97Mb	2.01Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/installer/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000021	8E3	TRACE	1.97Mb	2.01Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0028939247131348,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5626,
+  'stage_start_time' => 1381329123.5597,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000022	8E3	TRACE	1.97Mb	2.01Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0025877952575684,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5651,
+  'stage_start_time' => 1381329123.5651,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000023	8E3	DEBUG	1.97Mb	2.02Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/contacts/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000024	8E3	TRACE	1.97Mb	2.02Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0035910606384277,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5687,
+  'stage_start_time' => 1381329123.5651,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000025	8E3	TRACE	1.97Mb	2.02Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0042300224304199,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5729,
+  'stage_start_time' => 1381329123.5729,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000026	8E3	TRACE	1.97Mb	2.03Mb	download_heartbeat
+waInstaller::downloadStandard :download via fopen
+2013-10-09T18:32:03+04:0000027	8E3	DEBUG	1.97Mb	2.03Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0051949024200439,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5781,
+  'stage_start_time' => 1381329123.5729,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000028	8E3	TRACE	1.97Mb	2.03Mb	download_heartbeat
+waInstaller::downloadStandard :Source file is local
+{------------------------------------------------------------
+'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-content.tar.gz'
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000029	8E3	WARNING	1.97Mb	2.03Mb	download_heartbeat
+MD5 hash missed for file Z:\home\studio.my\webasyst\wa-installer/../wa-sources/wa-content.tar.gz
+2013-10-09T18:32:03+04:0000030	8E3	TRACE	1.97Mb	2.03Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0041658878326416,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5822,
+  'stage_start_time' => 1381329123.5729,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000031	8E3	TRACE	1.98Mb	2.04Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0033278465270996,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5855,
+  'stage_start_time' => 1381329123.5855,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000032	8E3	TRACE	1.98Mb	2.04Mb	download_heartbeat
+waInstaller::downloadStandard :download via fopen
+2013-10-09T18:32:03+04:0000033	8E3	DEBUG	1.98Mb	2.04Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0034329891204834,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5889,
+  'stage_start_time' => 1381329123.5855,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000034	8E3	TRACE	1.98Mb	2.04Mb	download_heartbeat
+waInstaller::downloadStandard :Source file is local
+{------------------------------------------------------------
+'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-system.tar.gz'
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000035	8E3	WARNING	1.98Mb	2.04Mb	download_heartbeat
+MD5 hash missed for file Z:\home\studio.my\webasyst\wa-installer/../wa-sources/wa-system.tar.gz
+2013-10-09T18:32:03+04:0000036	8E3	TRACE	1.98Mb	2.04Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0038120746612549,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5927,
+  'stage_start_time' => 1381329123.5855,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000037	8E3	TRACE	1.98Mb	2.05Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0035619735717773,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.5962,
+  'stage_start_time' => 1381329123.5962,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000038	8E3	TRACE	1.98Mb	2.05Mb	download_heartbeat
+waInstaller::downloadStandard :download via fopen
+2013-10-09T18:32:03+04:0000039	8E3	DEBUG	1.98Mb	2.05Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.004709005355835,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6009,
+  'stage_start_time' => 1381329123.5962,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000040	8E3	TRACE	1.98Mb	2.05Mb	download_heartbeat
+waInstaller::downloadStandard :Source file is local
+{------------------------------------------------------------
+'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/stickies.tar.gz'
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000041	8E3	WARNING	1.98Mb	2.05Mb	download_heartbeat
+MD5 hash missed for file Z:\home\studio.my\webasyst\wa-installer/../wa-sources/wa-apps/stickies.tar.gz
+2013-10-09T18:32:03+04:0000042	8E3	TRACE	1.98Mb	2.05Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0056850910186768,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6066,
+  'stage_start_time' => 1381329123.5962,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000043	8E3	TRACE	1.99Mb	2.06Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0046300888061523,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6112,
+  'stage_start_time' => 1381329123.6112,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000044	8E3	TRACE	1.99Mb	2.06Mb	download_heartbeat
+waInstaller::downloadStandard :download via fopen
+2013-10-09T18:32:03+04:0000045	8E3	DEBUG	1.99Mb	2.06Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0053389072418213,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6165,
+  'stage_start_time' => 1381329123.6112,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000046	8E3	TRACE	1.99Mb	2.06Mb	download_heartbeat
+waInstaller::downloadStandard :Source file is local
+{------------------------------------------------------------
+'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/site.tar.gz'
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000047	8E3	WARNING	1.99Mb	2.06Mb	download_heartbeat
+MD5 hash missed for file Z:\home\studio.my\webasyst\wa-installer/../wa-sources/wa-apps/site.tar.gz
+2013-10-09T18:32:03+04:0000048	8E3	TRACE	1.99Mb	2.06Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0060970783233643,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6226,
+  'stage_start_time' => 1381329123.6112,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000049	8E3	TRACE	1.99Mb	2.07Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0052909851074219,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6278,
+  'stage_start_time' => 1381329123.6278,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000050	8E3	TRACE	1.99Mb	2.07Mb	download_heartbeat
+waInstaller::downloadStandard :download via fopen
+2013-10-09T18:32:03+04:0000051	8E3	DEBUG	1.99Mb	2.07Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0052947998046875,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6331,
+  'stage_start_time' => 1381329123.6278,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000052	8E3	TRACE	1.99Mb	2.08Mb	download_heartbeat
+waInstaller::downloadStandard :Source file is local
+{------------------------------------------------------------
+'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/installer.tar.gz'
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000053	8E3	WARNING	1.99Mb	2.08Mb	download_heartbeat
+MD5 hash missed for file Z:\home\studio.my\webasyst\wa-installer/../wa-sources/wa-apps/installer.tar.gz
+2013-10-09T18:32:03+04:0000054	8E3	TRACE	2.00Mb	2.08Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0042991638183594,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6374,
+  'stage_start_time' => 1381329123.6278,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000055	8E3	TRACE	2.00Mb	2.08Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0040569305419922,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6414,
+  'stage_start_time' => 1381329123.6414,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000056	8E3	TRACE	2.00Mb	2.08Mb	download_heartbeat
+waInstaller::downloadStandard :download via fopen
+2013-10-09T18:32:03+04:0000057	8E3	DEBUG	2.00Mb	2.08Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0050568580627441,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6464,
+  'stage_start_time' => 1381329123.6414,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000058	8E3	TRACE	2.00Mb	2.09Mb	download_heartbeat
+waInstaller::downloadStandard :Source file is local
+{------------------------------------------------------------
+'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/contacts.tar.gz'
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000059	8E3	WARNING	2.00Mb	2.09Mb	download_heartbeat
+MD5 hash missed for file Z:\home\studio.my\webasyst\wa-installer/../wa-sources/wa-apps/contacts.tar.gz
+2013-10-09T18:32:03+04:0000060	8E3	TRACE	2.00Mb	2.09Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0052070617675781,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6516,
+  'stage_start_time' => 1381329123.6414,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000061	8E3	TRACE	2.00Mb	2.09Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0041110515594482,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6557,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000062	8E3	TRACE	2.00Mb	2.09Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-content.tar.gz',
+  'target_path' => 'wa-data/protected/wa-installer/8E3/update/wa-content/',
+  'base_path' => 'wa-content/',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000063	8E3	DEBUG	2.83Mb	2.87Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.042255878448486,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.6979,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000064	8E3	DEBUG	2.83Mb	2.91Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0068359375,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.7047,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000065	8E3	DEBUG	2.84Mb	2.91Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.12623620033264,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 159232,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.831,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 1261543.4582749,
+  'resume' => 
+  array (
+    'offset' => 311,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:03+04:0000066	8E3	DEBUG	2.84Mb	2.92Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.12853503227234,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 274432,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329123,
+  'timestamp_float' => 1381329123.9595,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 896378.41495993,
+  'resume' => 
+  array (
+    'offset' => 536,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:04+04:0000067	8E3	DEBUG	2.84Mb	2.92Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.13634300231934,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 413184,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329124,
+  'timestamp_float' => 1381329124.0957,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 1018259.8150375,
+  'resume' => 
+  array (
+    'offset' => 807,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:04+04:0000068	8E3	DEBUG	2.84Mb	2.93Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.14211010932922,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 600064,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329124,
+  'timestamp_float' => 1381329124.2378,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 1315204.3309054,
+  'resume' => 
+  array (
+    'offset' => 1172,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:04+04:0000069	8E3	DEBUG	2.84Mb	2.93Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 32,
+  'calculated_chunk' => 219.4,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 0,
+      1 => 308,
+      2 => 219,
+      3 => 248.75,
+      4 => 321.25,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:04+04:0000070	8E3	DEBUG	2.84Mb	2.93Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.25707101821899,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 709632,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329124,
+  'timestamp_float' => 1381329124.4949,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 426251.64001165,
+  'resume' => 
+  array (
+    'offset' => 1386,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 64,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:04+04:0000071	8E3	DEBUG	2.84Mb	2.93Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 64,
+  'calculated_chunk' => 240.25,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 308,
+      1 => 219,
+      2 => 248.75,
+      3 => 321.25,
+      4 => 104.25,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:04+04:0000072	8E3	DEBUG	2.84Mb	2.93Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.48717212677002,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 841728,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329124,
+  'timestamp_float' => 1381329124.982,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 271158.07222519,
+  'resume' => 
+  array (
+    'offset' => 1644,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:04+04:0000073	8E3	DEBUG	2.85Mb	2.93Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 191.9,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 219,
+      1 => 248.75,
+      2 => 321.25,
+      3 => 104.25,
+      4 => 66.25,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:05+04:0000074	8E3	DEBUG	2.85Mb	2.93Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.62708520889282,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 2633728,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329125,
+  'timestamp_float' => 1381329125.6091,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 2857738.6680983,
+  'resume' => 
+  array (
+    'offset' => 5144,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:05+04:0000075	8E3	DEBUG	2.85Mb	2.93Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 287.65,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 248.75,
+      1 => 321.25,
+      2 => 104.25,
+      3 => 66.25,
+      4 => 697.75,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:06+04:0000076	8E3	DEBUG	2.85Mb	2.93Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.83195996284485,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 3949568,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329126,
+  'timestamp_float' => 1381329126.4411,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 1581647.2060436,
+  'resume' => 
+  array (
+    'offset' => 7714,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:06+04:0000077	8E3	DEBUG	2.85Mb	2.94Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 315.15,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 321.25,
+      1 => 104.25,
+      2 => 66.25,
+      3 => 697.75,
+      4 => 386.25,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:06+04:0000078	8E3	TRACE	2.81Mb	2.94Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.18788719177246,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 3949568,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329126,
+  'timestamp_float' => 1381329126.6289,
+  'stage_start_time' => 1381329123.6557,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:03 +0400',
+  'stage_value' => 5248000,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 7714,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:06+04:0000079	8E3	TRACE	2.81Mb	2.94Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0046801567077637,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329126,
+  'timestamp_float' => 1381329126.6335,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 7714,
+    'tar_size' => 10250,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:06+04:0000080	8E3	TRACE	2.81Mb	2.94Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-system.tar.gz',
+  'target_path' => 'wa-data/protected/wa-installer/8E3/update/wa-system/',
+  'base_path' => 'wa-system/',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:06+04:0000081	8E3	DEBUG	2.85Mb	2.94Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.027656078338623,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329126,
+  'timestamp_float' => 1381329126.6612,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 4198400,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:06+04:0000082	8E3	DEBUG	2.85Mb	2.94Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 250.9,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 104.25,
+      1 => 66.25,
+      2 => 697.75,
+      3 => 386.25,
+      4 => 0,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:07+04:0000083	8E3	DEBUG	2.86Mb	2.94Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.37644100189209,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 626176,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329127,
+  'timestamp_float' => 1381329127.0376,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 4198400,
+  'stage_performance' => 1663495.0111754,
+  'resume' => 
+  array (
+    'offset' => 1223,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:07+04:0000084	8E3	DEBUG	2.86Mb	2.95Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 311.3,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 66.25,
+      1 => 697.75,
+      2 => 386.25,
+      3 => 0,
+      4 => 406.25,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:07+04:0000085	8E3	DEBUG	2.86Mb	2.95Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.48941707611084,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 903680,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329127,
+  'timestamp_float' => 1381329127.527,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 4198400,
+  'stage_performance' => 567027.7382468,
+  'resume' => 
+  array (
+    'offset' => 1765,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:07+04:0000086	8E3	DEBUG	2.86Mb	2.95Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 325.75,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 697.75,
+      1 => 386.25,
+      2 => 0,
+      3 => 406.25,
+      4 => 138.5,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:08+04:0000087	8E3	DEBUG	2.86Mb	2.95Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.65232801437378,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 1937920,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329128,
+  'timestamp_float' => 1381329128.1793,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 4198400,
+  'stage_performance' => 1585501.7631497,
+  'resume' => 
+  array (
+    'offset' => 3785,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:08+04:0000088	8E3	DEBUG	2.86Mb	2.96Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 263.65,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 386.25,
+      1 => 0,
+      2 => 406.25,
+      3 => 138.5,
+      4 => 387.25,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:08+04:0000089	8E3	DEBUG	2.86Mb	2.96Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.61910796165466,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 2908672,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329128,
+  'timestamp_float' => 1381329128.7984,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 4198400,
+  'stage_performance' => 1568030.2930882,
+  'resume' => 
+  array (
+    'offset' => 5681,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:08+04:0000090	8E3	DEBUG	2.86Mb	2.96Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 263,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 0,
+      1 => 406.25,
+      2 => 138.5,
+      3 => 387.25,
+      4 => 383,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:09+04:0000091	8E3	DEBUG	2.86Mb	2.96Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.7762610912323,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 3386880,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329129,
+  'timestamp_float' => 1381329129.5746,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 4198400,
+  'stage_performance' => 616056.04513066,
+  'resume' => 
+  array (
+    'offset' => 6615,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:09+04:0000092	8E3	DEBUG	2.86Mb	2.96Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 293.1,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 406.25,
+      1 => 138.5,
+      2 => 387.25,
+      3 => 383,
+      4 => 150.5,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000093	8E3	DEBUG	2.87Mb	2.96Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.63200402259827,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 4002816,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329130,
+  'timestamp_float' => 1381329130.2066,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 4198400,
+  'stage_performance' => 974610.26819239,
+  'resume' => 
+  array (
+    'offset' => 7818,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000094	8E3	DEBUG	2.87Mb	2.96Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 259.45,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 138.5,
+      1 => 387.25,
+      2 => 383,
+      3 => 150.5,
+      4 => 238,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000095	8E3	TRACE	2.82Mb	2.96Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.018874168395996,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 4002816,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329130,
+  'timestamp_float' => 1381329130.2255,
+  'stage_start_time' => 1381329126.6335,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:06 +0400',
+  'stage_value' => 4198400,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 7818,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000096	8E3	TRACE	2.82Mb	2.96Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0057599544525146,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329130,
+  'timestamp_float' => 1381329130.2312,
+  'stage_start_time' => 1381329130.2312,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:10 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 7818,
+    'tar_size' => 8200,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000097	8E3	TRACE	2.82Mb	2.96Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/stickies.tar.gz',
+  'target_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/stickies/',
+  'base_path' => 'wa-apps/stickies/',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000098	8E3	DEBUG	2.87Mb	2.96Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0088047981262207,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329130,
+  'timestamp_float' => 1381329130.24,
+  'stage_start_time' => 1381329130.2312,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:10 +0400',
+  'stage_value' => 524800,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000099	8E3	DEBUG	2.87Mb	2.97Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 231.75,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 387.25,
+      1 => 383,
+      2 => 150.5,
+      3 => 238,
+      4 => 0,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000100	8E3	TRACE	2.83Mb	2.97Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.26915097236633,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329130,
+  'timestamp_float' => 1381329130.5091,
+  'stage_start_time' => 1381329130.2312,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:10 +0400',
+  'stage_value' => 524800,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000101	8E3	TRACE	2.83Mb	2.97Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0055460929870605,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329130,
+  'timestamp_float' => 1381329130.5146,
+  'stage_start_time' => 1381329130.5146,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:10 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000102	8E3	TRACE	2.83Mb	2.97Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/site.tar.gz',
+  'target_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/site/',
+  'base_path' => 'wa-apps/site/',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000103	8E3	DEBUG	2.88Mb	2.97Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.010724067687988,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329130,
+  'timestamp_float' => 1381329130.5253,
+  'stage_start_time' => 1381329130.5146,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:10 +0400',
+  'stage_value' => 1049600,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 2050,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000104	8E3	DEBUG	2.88Mb	2.99Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 154.3,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 383,
+      1 => 150.5,
+      2 => 238,
+      3 => 0,
+      4 => 0,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000105	8E3	DEBUG	2.88Mb	2.99Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.31289386749268,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 452096,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329130,
+  'timestamp_float' => 1381329130.8382,
+  'stage_start_time' => 1381329130.5146,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:10 +0400',
+  'stage_value' => 1049600,
+  'stage_performance' => 1444968.6779624,
+  'resume' => 
+  array (
+    'offset' => 883,
+    'tar_size' => 2050,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:10+04:0000106	8E3	DEBUG	2.88Mb	2.99Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 148.3,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 150.5,
+      1 => 238,
+      2 => 0,
+      3 => 0,
+      4 => 353,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000107	8E3	TRACE	2.84Mb	2.99Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.24255990982056,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 452096,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.0807,
+  'stage_start_time' => 1381329130.5146,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:10 +0400',
+  'stage_value' => 1049600,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 883,
+    'tar_size' => 2050,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000108	8E3	TRACE	2.84Mb	2.99Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0057051181793213,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.0864,
+  'stage_start_time' => 1381329131.0864,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 883,
+    'tar_size' => 2050,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000109	8E3	TRACE	2.84Mb	2.99Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/installer.tar.gz',
+  'target_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/installer/',
+  'base_path' => 'wa-apps/installer/',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000110	8E3	DEBUG	2.89Mb	2.99Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0093839168548584,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.0958,
+  'stage_start_time' => 1381329131.0864,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 1049600,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 2050,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000111	8E3	DEBUG	2.89Mb	3.00Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 128,
+  'calculated_chunk' => 118.2,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 238,
+      1 => 0,
+      2 => 0,
+      3 => 353,
+      4 => 0,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000112	8E3	TRACE	2.85Mb	3.00Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.3188488483429,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.4146,
+  'stage_start_time' => 1381329131.0864,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 1049600,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 2050,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000113	8E3	TRACE	2.85Mb	3.00Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0053939819335938,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.42,
+  'stage_start_time' => 1381329131.42,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 2050,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 128,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000114	8E3	TRACE	2.85Mb	3.00Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/contacts.tar.gz',
+  'target_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/contacts/',
+  'base_path' => 'wa-apps/contacts/',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000115	8E3	DEBUG	2.89Mb	3.00Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0080819129943848,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.428,
+  'stage_start_time' => 1381329131.42,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 524800,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 120,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000116	8E3	DEBUG	2.89Mb	3.02Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 120,
+  'calculated_chunk' => 70.6,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 0,
+      1 => 0,
+      2 => 353,
+      3 => 0,
+      4 => 0,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000117	8E3	DEBUG	2.90Mb	3.02Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.012877941131592,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 15360,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.4409,
+  'stage_start_time' => 1381329131.42,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 524800,
+  'stage_performance' => 1194395.6958787,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000118	8E3	DEBUG	2.90Mb	3.02Mb	extract_heartbeat
+waInstaller::adjustStageChunk
+{------------------------------------------------------------
+array (
+  'current_chunk' => 72,
+  'calculated_chunk' => 128.95,
+  'performance_data' => 
+  array (
+    'extract' => 
+    array (
+      0 => 0,
+      1 => 353,
+      2 => 0,
+      3 => 0,
+      4 => 291.75,
+    ),
+  ),
+  'stack_length' => 5,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000119	8E3	TRACE	2.85Mb	3.02Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.36234903335571,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 15360,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8032,
+  'stage_start_time' => 1381329131.42,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 524800,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000120	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0084660053253174,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8116,
+  'stage_start_time' => 1381329131.8116,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000121	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/8E3/update/wa-content',
+  'target_path' => 'wa-content',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000122	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/8E3/update/wa-content',
+  'newname' => 'wa-content',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000123	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-content',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000124	8E3	TRACE	2.86Mb	3.02Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.016174077987671,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8278,
+  'stage_start_time' => 1381329131.8116,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000125	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.006464958190918,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8342,
+  'stage_start_time' => 1381329131.8342,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000126	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/8E3/update/wa-system',
+  'target_path' => 'wa-system',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000127	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/8E3/update/wa-system',
+  'newname' => 'wa-system',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000128	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-system',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000129	8E3	TRACE	2.86Mb	3.02Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.011259078979492,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8454,
+  'stage_start_time' => 1381329131.8342,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000130	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0070230960845947,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8524,
+  'stage_start_time' => 1381329131.8524,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000131	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/stickies',
+  'target_path' => 'wa-apps/stickies',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000132	8E3	DEBUG	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-apps/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000133	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/stickies',
+  'newname' => 'wa-apps/stickies',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000134	8E3	TRACE	2.86Mb	3.02Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/stickies',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000135	8E3	TRACE	2.86Mb	3.02Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.011982917785645,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8644,
+  'stage_start_time' => 1381329131.8524,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000136	8E3	TRACE	2.87Mb	3.02Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0082521438598633,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8726,
+  'stage_start_time' => 1381329131.8726,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000137	8E3	TRACE	2.87Mb	3.02Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/site',
+  'target_path' => 'wa-apps/site',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000138	8E3	TRACE	2.87Mb	3.02Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/site',
+  'newname' => 'wa-apps/site',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000139	8E3	TRACE	2.87Mb	3.02Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/site',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000140	8E3	TRACE	2.87Mb	3.02Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.011252164840698,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8838,
+  'stage_start_time' => 1381329131.8726,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000141	8E3	TRACE	2.87Mb	3.02Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0064480304718018,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.8902,
+  'stage_start_time' => 1381329131.8902,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000142	8E3	TRACE	2.87Mb	3.03Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/installer',
+  'target_path' => 'wa-apps/installer',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000143	8E3	TRACE	2.87Mb	3.03Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/installer',
+  'newname' => 'wa-apps/installer',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000144	8E3	TRACE	2.87Mb	3.03Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/installer',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000145	8E3	TRACE	2.87Mb	3.03Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.011122941970825,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9013,
+  'stage_start_time' => 1381329131.8902,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000146	8E3	TRACE	2.87Mb	3.03Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0069658756256104,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9082,
+  'stage_start_time' => 1381329131.9082,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000147	8E3	TRACE	2.87Mb	3.04Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/contacts',
+  'target_path' => 'wa-apps/contacts',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000148	8E3	TRACE	2.87Mb	3.04Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/contacts',
+  'newname' => 'wa-apps/contacts',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000149	8E3	TRACE	2.87Mb	3.04Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/contacts',
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000150	8E3	TRACE	2.87Mb	3.04Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.01233696937561,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9206,
+  'stage_start_time' => 1381329131.9082,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000151	8E3	TRACE	2.88Mb	3.04Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.007422924041748,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9279,
+  'stage_start_time' => 1381329131.9279,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000152	8E3	DEBUG	2.88Mb	3.05Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0075569152832031,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9355,
+  'stage_start_time' => 1381329131.9279,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000153	8E3	TRACE	2.88Mb	3.05Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0084390640258789,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9439,
+  'stage_start_time' => 1381329131.9279,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000154	8E3	TRACE	2.88Mb	3.06Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0079550743103027,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9518,
+  'stage_start_time' => 1381329131.9518,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000155	8E3	TRACE	2.88Mb	3.06Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0069169998168945,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9587,
+  'stage_start_time' => 1381329131.9518,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000156	8E3	TRACE	2.88Mb	3.07Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0070021152496338,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9657,
+  'stage_start_time' => 1381329131.9657,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000157	8E3	TRACE	2.89Mb	3.07Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0075139999389648,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9732,
+  'stage_start_time' => 1381329131.9657,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000158	8E3	TRACE	2.89Mb	3.08Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.011505126953125,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9846,
+  'stage_start_time' => 1381329131.9846,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:11+04:0000159	8E3	TRACE	2.89Mb	3.08Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0077488422393799,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329131,
+  'timestamp_float' => 1381329131.9923,
+  'stage_start_time' => 1381329131.9846,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:11 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000160	8E3	TRACE	2.89Mb	3.09Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0081911087036133,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0004,
+  'stage_start_time' => 1381329132.0004,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000161	8E3	TRACE	2.89Mb	3.09Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0082271099090576,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0086,
+  'stage_start_time' => 1381329132.0004,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000162	8E3	TRACE	2.89Mb	3.10Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0081110000610352,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0167,
+  'stage_start_time' => 1381329132.0167,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000163	8E3	TRACE	2.90Mb	3.10Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.008357048034668,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0251,
+  'stage_start_time' => 1381329132.0167,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000164	8E3	TRACE	2.90Mb	3.11Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.008385181427002,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0334,
+  'stage_start_time' => 1381329132.0334,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000165	8E3	TRACE	2.90Mb	3.11Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0078620910644531,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-content',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0412,
+  'stage_start_time' => 1381329132.0334,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000166	8E3	TRACE	2.90Mb	3.11Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0084450244903564,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0496,
+  'stage_start_time' => 1381329132.0496,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000167	8E3	TRACE	2.90Mb	3.12Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0078589916229248,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-system',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0575,
+  'stage_start_time' => 1381329132.0496,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000168	8E3	TRACE	2.90Mb	3.12Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0092499256134033,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0667,
+  'stage_start_time' => 1381329132.0667,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000169	8E3	TRACE	2.91Mb	3.13Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.011296987533569,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/stickies',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0779,
+  'stage_start_time' => 1381329132.0667,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000170	8E3	TRACE	2.91Mb	3.13Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0094170570373535,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0873,
+  'stage_start_time' => 1381329132.0873,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000171	8E3	TRACE	2.91Mb	3.14Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0092880725860596,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/site',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.0966,
+  'stage_start_time' => 1381329132.0873,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000172	8E3	TRACE	2.91Mb	3.14Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.012130975723267,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.1087,
+  'stage_start_time' => 1381329132.1087,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000173	8E3	TRACE	2.91Mb	3.15Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.011603832244873,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/installer',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.1203,
+  'stage_start_time' => 1381329132.1087,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000174	8E3	TRACE	2.91Mb	3.15Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0099000930786133,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.1301,
+  'stage_start_time' => 1381329132.1301,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000175	8E3	TRACE	2.92Mb	3.16Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1381329123,
+  'start_time_float' => 1381329123.4925,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0098731517791748,
+  'thread_id' => '8E3',
+  'chunk_id' => 'wa-apps/contacts',
+  'stage_current_value' => 0,
+  'stage_status' => 'complete',
+  'timestamp' => 1381329132,
+  'timestamp_float' => 1381329132.14,
+  'stage_start_time' => 1381329132.1301,
+  'datetime' => 'Wed, 09 Oct 2013 18:32:12 +0400',
+  'stage_value' => 0,
+  'stage_performance' => 0,
+  'resume' => 
+  array (
+    'offset' => 30,
+    'tar_size' => 1025,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 72,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000176	8E3	DEBUG	2.92Mb	3.16Mb	update_complete
+waInstaller::update
+{------------------------------------------------------------
+array (
+  'update_list' => 
+  array (
+    4 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-content.tar.gz',
+      'target' => 'wa-content/',
+      'slug' => 'wa-content',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-content/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-content.tar.gz',
+      'backup' => false,
+    ),
+    5 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-system.tar.gz',
+      'target' => 'wa-system/',
+      'slug' => 'wa-system',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-system/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-system.tar.gz',
+      'backup' => false,
+    ),
+    3 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/stickies.tar.gz',
+      'target' => 'wa-apps/stickies/',
+      'slug' => 'wa-apps/stickies',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/stickies/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/stickies.tar.gz',
+      'backup' => false,
+    ),
+    2 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/site.tar.gz',
+      'target' => 'wa-apps/site/',
+      'slug' => 'wa-apps/site',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/site/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/site.tar.gz',
+      'backup' => false,
+    ),
+    1 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/installer.tar.gz',
+      'target' => 'wa-apps/installer/',
+      'slug' => 'wa-apps/installer',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/installer/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/installer.tar.gz',
+      'backup' => false,
+    ),
+    0 => 
+    array (
+      'source' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/contacts.tar.gz',
+      'target' => 'wa-apps/contacts/',
+      'slug' => 'wa-apps/contacts',
+      'extract_path' => 'wa-data/protected/wa-installer/8E3/update/wa-apps/contacts/',
+      'pass' => false,
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => 'Z:\\home\\studio.my\\webasyst\\wa-installer/../wa-sources/wa-apps/contacts.tar.gz',
+      'backup' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2013-10-09T18:32:12+04:0000177	8E3	TRACE	2.85Mb	3.26Mb	update_complete
+waInstaller::__destruct called
+
+
+
