@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2017-02-06 17:13:08
+<?php /* Smarty version 2.6.26, created on 2018-02-12 18:51:10
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'component', 'index.html', 10, false),array('modifier', 'set_query', 'index.html', 56, false),)), $this); ?>
@@ -36,7 +36,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'component',
 </div>
                            <div class="services-part-one left"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '6:22:20','view' => 'vertical','overridestyle' => ':t5apqg'), $this);?>
 <!-- cpt_container_end --></div>
-                           <div class="services-part-two right"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '21:7:8','view' => 'vertical','overridestyle' => ':t5apqg'), $this);?>
+                           <div class="services-part-two right"><!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'auxpages_navigation','select_pages' => 'selected','auxpages' => '21:7:8:23','view' => 'vertical','overridestyle' => ':t5apqg'), $this);?>
 <!-- cpt_container_end --></div>
                            <div class="clear"></div>
                         </div>
@@ -84,23 +84,22 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'component',
             </td>
             <td class="c_column">
 <!-- SLIDERR -->
-            <?php if ($this->_tpl_vars['main_content_template'] == "home1.html"): ?>
-<div class="slider slider1">
-			<div class="sliderContent">
-				<div class="item">
-					<img src="/kdm/slider/img/img1.jpg" alt="" />
-				</div>
-				<div class="item">
-					<img src="/kdm/slider/img/img1.jpg" alt="" />
-				</div>
-				<div class="item">
-					<img src="/kdm/slider/img/img1.jpg" alt="" />
-				</div>
-
-			</div>
-		</div>
+    <?php if ($this->_tpl_vars['main_content_template'] == "home.html"): ?>
+        <div class="slider slider1">
+            <div class="sliderContent">
+                <div class="item">
+                    <img src="/kdm/slider/img/banner_1.jpg" alt="" />
+                </div>
+                <div class="item">
+                    <img src="/kdm/slider/img/banner_2.jpg" alt="" />
+                </div>
+                <div class="item">
+                    <img src="/kdm/slider/img/banner_3.jpg" alt="" />
+                </div>
+            </div>
+        </div>
         <div class="clear"></div>
-            <?php endif; ?>
+    <?php endif; ?>
 <!-- SLIDER -->
         <div class="frst" style="margin-top:0px;">
             <!-- cpt_container_start --><?php echo smarty_function_component(array('cpt_id' => 'maincontent','overridestyle' => ':etursx'), $this);?>

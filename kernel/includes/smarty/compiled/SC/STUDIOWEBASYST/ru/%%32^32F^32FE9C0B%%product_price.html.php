@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-12-26 21:26:00
+<?php /* Smarty version 2.6.26, created on 2018-02-12 18:51:23
          compiled from product_price.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'product_price.html', 7, false),)), $this); ?>
@@ -23,7 +23,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'p
 
 <?php if ($this->_tpl_vars['currencies_count'] != 0 && $this->_tpl_vars['product_info']['Price'] > 0): ?>
 				<?php if ($this->_tpl_vars['product_info']['list_price'] > 0 && $this->_tpl_vars['product_info']['list_price'] > $this->_tpl_vars['product_info']['Price'] && $this->_tpl_vars['product_info']['Price'] > 0): ?> 
-		<span class="regularPrice"><?php echo $this->_tpl_vars['product_info']['list_priceWithUnit']; ?>
+		<span class="regularPrice r-regularPrice"><?php echo $this->_tpl_vars['product_info']['list_priceWithUnit']; ?>
 </span> 
 		<?php endif; ?>
 

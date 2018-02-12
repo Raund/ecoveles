@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2016-12-20 14:27:02
+<?php /* Smarty version 2.6.26, created on 2018-02-12 18:51:23
          compiled from product_images.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'product_images.html', 22, false),array('function', 'counter', 'product_images.html', 35, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'product_images.html', 25, false),array('function', 'counter', 'product_images.html', 38, false),)), $this); ?>
 <?php if (! $this->_tpl_vars['CPT_CONSTRUCTOR_MODE']): ?>
 	<link rel="stylesheet" href="<?php echo @URL_ROOT; ?>
 /3rdparty/highslide/highslide.css" type="text/css" />
@@ -25,8 +25,12 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'p
 		<div class="product_i" style="text-align:center;width: <?php echo @CONF_PRDPICT_STANDARD_SIZE+32; ?>
 px;">
 		<a name="anch_current_picture"></a>
-		<div class="product_i_2" style="width: <?php echo @CONF_PRDPICT_STANDARD_SIZE; ?>
+		<div class="product_i_2" style="position:relative; width: <?php echo @CONF_PRDPICT_STANDARD_SIZE; ?>
 px;">
+			<?php if ($this->_tpl_vars['product_info']['list_price'] > 0): ?>
+				<div class="r-sale"><?php echo 'my_sale'; ?>
+</div>
+			<?php endif; ?>
 		<?php if (! $this->_tpl_vars['printable_version'] && $this->_tpl_vars['product_info']['big_picture'] && ( $this->_tpl_vars['product_info']['big_picture'] != $this->_tpl_vars['product_info']['picture'] )): ?>
 			<a target="_blank" onclick="return hs.expand(this)" href='<?php echo @URL_PRODUCTS_PICTURES; ?>
 /<?php if ($this->_tpl_vars['product_info']['big_picture']): 

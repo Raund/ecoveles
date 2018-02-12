@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-12-21 22:36:52
+<?php /* Smarty version 2.6.26, created on 2018-02-12 18:51:11
          compiled from product_list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'set_query_html', 'product_list.html', 8, false),array('modifier', 'escape', 'product_list.html', 18, false),)), $this); ?>
@@ -20,13 +20,13 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'set_query_h
 ; height: auto;">
                         <?php if ($this->_tpl_vars['_product']['thumbnail']): ?>
                             <table class="popular-table" cellpadding="0" cellspacing="0" style="width: <?php echo @CONF_PRDPICT_THUMBNAIL_SIZE+20; ?>
-; height: <?php echo @CONF_PRDPICT_THUMBNAIL_SIZE; ?>
+; height: <?php echo @CONF_PRDPICT_THUMBNAIL_SIZE-15; ?>
 ;">
                                 <tr>
                                     <td valign="bottom" align="center">
                                         <a href="<?php echo $this->_tpl_vars['_product_url']; ?>
 ">
-                                            <img class="imgMy" src="<?php echo @URL_PRODUCTS_PICTURES; ?>
+                                            <img class="imgMy" style="max-height:135px" src="<?php echo @URL_PRODUCTS_PICTURES; ?>
 /<?php echo ((is_array($_tmp=$this->_tpl_vars['_product']['thumbnail'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'url') : smarty_modifier_escape($_tmp, 'url')); ?>
 " alt="<?php echo ((is_array($_tmp=$this->_tpl_vars['_product']['name'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')); ?>
 ">
