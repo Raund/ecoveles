@@ -1015,18 +1015,17 @@ del.r-old-price{
 .r-sale{
     position: absolute;
     background-color: #ffb300;
-    padding: 7px 5px 10px 10px;
+    padding: 15px 8px 20px 20px;
     top: 0;
     right: 0;
-    border-radius: 0 0 0 20px;
+    border-radius: 0 0 0 80%;
     color: #fff;
-    font-size: 12px;
+    font-size: 15px;
     letter-spacing: 1.1;
 }
 .product_i_2 .r-sale{
-    padding: 15px 15px 20px 25px;
-    border-radius: 0 0 0 65px;
-    font-size: 16px;
+    padding: 25px 15px 30px 30px;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 1;
 }
