@@ -42,7 +42,7 @@ var another_type = 'upload';
 	<a style="padding:10px;" href='#deleteall_images' id="tab-deleteall-link" title='{"imm_delall_confirmation"|translate}'>{lbl_imm_delete_all}</a>
 	{/if}
 
-	<div id="tab-swfupload-section" style="display:block;background-color: #f5f0bb;padding:10px;margin:10px 0;min-height: 80px;">
+	<div id="tab-swfupload-section" style="display:none;background-color: #f5f0bb;padding:10px;margin:10px 0;min-height: 80px;">
 		<div id="divSWFUploadUI">
 			<div class="fieldset  flash" id="fsUploadProgress" style="display:none;width:450px;max-height:300px;overflow: auto;">
 				{*<span class="legend">{"imm_swf_upload_queue"|translate}</span>*}
@@ -55,7 +55,7 @@ var another_type = 'upload';
 		</div>
 	</div>
 	
-	<div id="tab-upload-section" style="display:none;background-color: #f5f0bb;padding:10px;margin:10px 0;min-height: 80px;">
+	<div id="tab-upload-section" style="display:block;background-color: #f5f0bb;padding:10px;margin:10px 0;min-height: 80px;">
 	<form class="imm_upload_form" method="post" action="{'action=upload_image'|set_query_html}" enctype="multipart/form-data">
 		<input name="upload_picture" type="file" />
 		<input value="{'btn_upload'|translate}" type="submit"/>
