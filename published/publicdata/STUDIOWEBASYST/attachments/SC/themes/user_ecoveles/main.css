@@ -1485,6 +1485,51 @@ table#header tr td.phones div.frst.wrap-phone{
 table#header tr td.callback div.frst a:hover{
     text-decoration: underline;
 }
+.l_column h2{
+    font-size: 20px;
+    margin: 10px 0 0px 0px;
+    font-weight: normal;
+    text-transform: uppercase
+  }
+span.r-review-title{
+    display: block;
+    font-weight: normal;
+    font-size: 19px;
+    margin: 10px 0px 20px 0px;
+    color: #2EA82B;
+}  
+.cpt_category_tree li.parent_current a,
+.cpt_category_tree .child_current a,
+.cat_path_in_productpage td a:last-child,
+.cpt_product_category_info td a:last-child{
+    pointer-events: none;
+    cursor: default;
+}
+h1.page-404 {
+    width: 100%;
+    font-weight: 700;
+    color: #4cad1f;
+    font-size: 240px;
+    line-height: 1;
+    margin: 40px 0;
+    text-align: center;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, .5);
+}
+a.to_home{
+    display: block;
+    width: 170px;
+    margin: 50px auto 20px;
+    padding: 10px 15px;
+    font-weight: bold;
+    background: #57b82b;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    box-shadow: 0 1px 10px rgba(0,0,0,1);
+    color: #fff;
+}
+a.to_home:hover{
+    box-shadow: 0 1px 15px rgba(0,0,0,.7);
+}
 .cpt_product_price{
     width: 230px;
     float: left;
@@ -1583,6 +1628,9 @@ td#prddeatailed_container .cpt_product_price span.totalPrice{
     }
     .cpt_product_price {
         width: 100%;
+    }
+    h1.page-404 {
+        font-size: 100px;
     }
 }
 @media screen and (max-width: 600px) {
